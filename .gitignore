@@ -1,0 +1,9 @@
+backend/uploaded_pdfs/
+
+backend/storage/faiss/
+.env
+__pycache__/
+*.pyc
+.venv/
+*.log
+node_modules/
