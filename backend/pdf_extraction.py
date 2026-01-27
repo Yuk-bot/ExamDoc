@@ -1,0 +1,74 @@
+import pdfplumber
+from pdf2image import convert_from_path
+import pytesseract
+import tempfile
+import re
+
+
+def extract_text_and_type(pdf_path: str, min_text_length: int = 100) -> tuple[str, bool]: #returns a list as [extracted test, scanned or not]
+    text = ""
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            page_text = page.extract_text()
+            if page_text:
+                text += page_text + "\n"
+
+    text = text.strip()
+    if len(text) >= 100:
+        return text, False
+    
+    else:
+        ocr_text = ""
+        with tempfile.TemporaryDirectory() as temp_dir:
+            images = convert_from_path(pdf_path, dpi=300, output_folder=temp_dir)
+            for img in images:
+                ocr_text += pytesseract.image_to_string(img) + "\n"
+
+        return ocr_text.strip(), True
+
+
+
+#cleaning the text before storing
+
+def split_into_lines(text: str):
+    return text.splitlines() #you get a list of strings with lines as elements
+
+def normalize_text(lines):
+    normalize=[]
+    for line in lines:
+        line=line.strip() 
+        line=re.sub(r"\s+ ", " ", line)
+        normalize.append(line)
+    return normalize # a list of lines with spaces thing solved
+
+#removing lines with only numbers like pgno, or like just some numbers
+def remove(lines):
+    removed=[]
+    for line in lines:
+        if line.replace("/", "").isdigit()==False:  #checking if the whole one string=one line is a digit or wat
+            removed.append(line)
+    return removed
+
+#removing repeated lines 
+from collections import Counter 
+def remove_repeated_lines(lines, repetition_threshold: float = 0.3):
+    line_counts = Counter(lines)
+    total_lines = len(lines)
+
+    cleaned = []
+    for line in lines:
+        frequency = line_counts[line] / total_lines
+        if frequency < repetition_threshold:
+            cleaned.append(line)
+
+    return cleaned
+
+def rebuild_text(lines):
+    return "\n".join(lines)#separating the lines inside the it by new line 
+
+def cleaned_text(raw_text):
+    lines=split_into_lines(raw_text)
+    lines=normalize_text(lines)
+    lines=remove(lines)
+    lines=remove_repeated_lines(lines)
+    return rebuild_text(lines)
