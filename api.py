@@ -18,6 +18,7 @@ from backend.faiss import search_faiss
 from backend.embeddings import embeded_chunks
 from backend.faiss import build_faiss_index, INDEX_PATH
 from backend.context import assemble_context
+from backend.llm import generate_answer
 
 
 
@@ -34,7 +35,8 @@ def query_documents(request: QueryRequest):
         k_top=request.k_top
     )
 
-    assemble_context(results)
+    context=assemble_context(results)
+    answer=generate_answer(query=request.query, context=context)
 
     if not results:
         return {
@@ -45,6 +47,7 @@ def query_documents(request: QueryRequest):
 
     return {
         "query": request.query,
+        "answer": answer,
         "matches": results
     }
 
