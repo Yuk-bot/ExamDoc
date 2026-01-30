@@ -16,7 +16,7 @@ from backend.chunking import adaptive_chunking
 from backend.storage import save_chunks, validate_chunks
 from backend.faiss import search_faiss
 from backend.embeddings import embeded_chunks
-from backend.faiss import build_faiss_index, INDEX_PATH
+from backend.faiss import build_or_update_faiss, INDEX_PATH
 from backend.context import assemble_context
 from backend.llm import generate_answer
 
@@ -97,8 +97,10 @@ async def upload_multiple(files: List[UploadFile] = File(...)):
         if texts:  #safety check for embeddings
             embeddings = embeded_chunks(chunks)
 
-        if not os.path.exists(INDEX_PATH):
-            build_faiss_index(embeddings, chunks) #indexes built before handn so that can be searched later
+        if texts:
+            embeddings = embeded_chunks(chunks)
+            build_or_update_faiss(embeddings, chunks)
+            #indexes built before handn so that can be searched later
 
         save_metadata(metadata, doc_id)
         results.append(metadata)
