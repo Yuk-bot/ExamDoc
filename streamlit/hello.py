@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
 
-st.sidebar.title("Upload files")
+s=st.sidebar.title("Upload files")
+st.sidebar.markdown("The summary for the pdf is as follows")
 
 uploaded_files = st.file_uploader(
     "Upload PDF files",
@@ -35,7 +36,8 @@ st.divider()
 query= "http://127.0.0.1:8000/query"
 
 st.title("Examdoc")
-
+st.divider()
+st.markdown("Open the sidebar to get the pdf summary")
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
