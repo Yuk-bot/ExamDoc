@@ -64,14 +64,25 @@ def save_chunks(chunks: list[dict], doc_id: str) -> str:
 
     return path
 
+SUMMARY_DIR="storage/summary"
+os.makedirs(SUMMARY_DIR, exist_ok=True)
+def save_summary(summary:str, doc_id) :
+    path=os.path.join(SUMMARY_DIR, f"{doc_id}.json")
+    with open(path, "w", encoding="utf-8" ) as f:
+        json.dump(summary, f, indent=2)
+    return path
+
+
 def validate_chunks(chunks: list[dict]):
     valid = []
 
     for c in chunks:
-        if c.get("text") and len(c["text"].strip()) > 20:
+        text = c.get("text", "").strip()
+        if len(text) >= 80:  # semantic chunks should be richer
             valid.append(c)
 
-    return valid #the final chunks
+    return valid
+
 
 
 
