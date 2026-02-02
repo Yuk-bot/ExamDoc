@@ -1,8 +1,26 @@
 import streamlit as st
 import requests
+import os, json
 
-s=st.sidebar.title("Upload files")
-st.sidebar.markdown("The summary for the pdf is as follows")
+SUMMARY_DIR = "storage/summary"
+def load_summary():
+    latest_path = os.path.join(SUMMARY_DIR, "latest.json")
+    if not os.path.exists(latest_path):
+        return None
+
+    with open(latest_path, "r", encoding="utf-8") as f:
+        doc_id = json.load(f)["doc_id"]
+
+    summary_path = os.path.join(SUMMARY_DIR, f"{doc_id}.json")
+    if not os.path.exists(summary_path):
+        return None
+
+    with open(summary_path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+
+
 
 uploaded_files = st.file_uploader(
     "Upload PDF files",
@@ -29,6 +47,13 @@ if uploaded_files:
         if response.status_code == 200:
             st.success("Upload successful")
             st.badge("Success")
+            st.sidebar.title("Upload files")
+            st.sidebar.subheader("The summary for the pdf is as follows")
+            summary=load_summary()
+            if not summary:
+                st.sidebar.markdown("Summary not avaliable")
+            st.sidebar.write(summary)
+            st.markdown("Open the sidebar to get summary")
         else:
             st.error(f"Upload failed: {response.text}")
 
@@ -37,8 +62,10 @@ query= "http://127.0.0.1:8000/query"
 
 st.title("Examdoc")
 st.divider()
-st.markdown("Open the sidebar to get the pdf summary")
-if "messages" not in st.session_state:
+
+if "messages" not in st.session_state:  
+    #session state is the session state object that lets you execute your requests 
+    #a session is every active run of the streamlit app u see on the broweser evry time u refresher or start you app you get a new session and state is what is happening inside your particular session- what is being done 
     st.session_state.messages = []
 
 # Show chat history
@@ -49,20 +76,20 @@ for msg in st.session_state.messages:
 prompt = st.chat_input("Ask a question")
 
 if prompt:
-    # Show user message
+   
     st.session_state.messages.append(
         {"role": "user", "content": prompt}
     )
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    payload = {
-        "query": prompt,  # MUST match FastAPI model
+    data_to_backend = {
+        "query": prompt,
         "k_top": 5
     }
 
     try:
-        response = requests.post(query, json=payload)
+        response = requests.post(query, json=data_to_backend)
 
         if response.status_code == 200:
             answer = response.json()["answer"]
