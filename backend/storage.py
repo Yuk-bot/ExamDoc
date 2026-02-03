@@ -70,9 +70,19 @@ def save_summary(summary:str, doc_id) :
     path=os.path.join(SUMMARY_DIR, f"{doc_id}.json")
     with open(path, "w", encoding="utf-8" ) as f:
         json.dump(summary, f, indent=2)
+
+#stores the latest docid in this file so for summary it will pick the doc id from this file and pass tolaod summary so summary of latest files will be displayed
+    latest_path = os.path.join(SUMMARY_DIR, "latest.json")
+    with open(latest_path, "w", encoding="utf-8") as f:
+        json.dump({"doc_id": doc_id}, f, indent=2)
+
     return path
 
 
+
+    
+
+    
 def validate_chunks(chunks: list[dict]):
     valid = []
 
