@@ -1,9 +1,10 @@
 import streamlit as st
 import requests
 import os, json
+import time
 
 SUMMARY_DIR = "storage/summary"
-def load_summary():
+def load_summary(retries=5, delay=0.5):
     latest_path = os.path.join(SUMMARY_DIR, "latest.json")
     if not os.path.exists(latest_path):
         return None
@@ -22,14 +23,14 @@ def load_summary():
 
 
 
-uploaded_files = st.file_uploader(
+uploaded_files = st.sidebar.file_uploader(
     "Upload PDF files",
     type=["pdf"],
     accept_multiple_files=True
 )
-
+st.sidebar.title("Upload files")
 if uploaded_files:
-    if st.button("Upload to backend"):
+    if st.sidebar.button("Upload to backend"):
         files = []
     
         
@@ -45,19 +46,19 @@ if uploaded_files:
             )
 
         if response.status_code == 200:
-            st.success("Upload successful")
-            st.badge("Success")
-            st.sidebar.title("Upload files")
-            st.sidebar.subheader("The summary for the pdf is as follows")
-            summary=load_summary()
-            if not summary:
-                st.sidebar.markdown("Summary not avaliable")
-            st.sidebar.write(summary)
-            st.markdown("Open the sidebar to get summary")
+            data=response.json() #get the json part of the reponse returned by the /upload endpoint
+
+            #create a new varibale function by state_session like basically create a new state and use it only after file uplaoad
+            st.session_state.summary=data[-1]["summary"]
+            if "summary" in st.session_state:
+                st.sidebar.subheader("Summary")
+                st.sidebar.markdown(st.session_state.summary)
+            
         else:
+            st.sidebar.error(f"Upload failed: {response.text}")
             st.error(f"Upload failed: {response.text}")
 
-st.divider()
+
 query= "http://127.0.0.1:8000/query"
 
 st.title("Examdoc")
