@@ -5,6 +5,7 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from backend.storage import generate_doc_id
 
+
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 doc_id=generate_doc_id()
@@ -61,7 +62,7 @@ def search_faiss(query: str, k_top: int = 20):
         normalize_embeddings=True
     ).astype("float32")
 
-    distances, indices = index.search(query_vector, k_top*5)
+    distances, indices = index.search(query_vector, k_top)
 
     results = []
     #DISTANCE_THRESHOLD=1.1
@@ -79,3 +80,10 @@ def search_faiss(query: str, k_top: int = 20):
         chunk_meta["distance"] = float(distance)
         results.append(chunk_meta)
     return results 
+
+def top_chunks(query, k_top=10):
+    text=""
+    results=search_faiss(query, k_top=k_top)
+    for result in results:
+        text="\n"+result["text"]
+    return text 
