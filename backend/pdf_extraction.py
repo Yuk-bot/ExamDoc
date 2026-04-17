@@ -26,9 +26,31 @@ def extract_text_and_type(pdf_path: str, min_text_length: int = 100) -> tuple[st
 
         return ocr_text.strip(), True
 
+def extract_from_txt(file_path: str) -> str:
+    with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+        return f.read()
 
+from docx import Document
+
+def extract_from_docx(file_path: str) -> str:
+    doc = Document(file_path)
+    return "\n".join([para.text for para in doc.paragraphs])
 
 #cleaning the text before storing
+
+import os
+
+def extract_raw_text(file_path: str) -> tuple[str, bool]:
+    ext = os.path.splitext(file_path)[1].lower()
+
+    if ext == ".pdf":
+        return extract_text_and_type(file_path)  
+    elif ext == ".docx":
+        return extract_from_docx(file_path), False
+    elif ext == ".txt":
+        return extract_from_txt(file_path), False
+    else:
+        raise ValueError(f"Unsupported file format: {ext}")
 
 def split_into_lines(text: str):
     return text.splitlines() #you get a list of strings with lines as elements

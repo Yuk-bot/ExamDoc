@@ -30,9 +30,9 @@ def load_summary(retries=5, delay=0.5):
 
 st.sidebar.title("Upload files")
 uploaded_files = st.sidebar.file_uploader(
-    "Upload PDF files",
-    type=["pdf"],
-    key='pdf',  #creating new key for session_state fort the pdf_ref varible
+    "Upload PDF, DOCX, or TXT files",
+    type=["pdf", "docx", "txt"],
+    key='upload_files',  #creating new key for session_state for the uploaded file variable
     accept_multiple_files=True
 )
 
@@ -44,8 +44,14 @@ if uploaded_files:
     
         
         for file in uploaded_files:
+            ext = os.path.splitext(file.name)[1].lower()
+            mime_type = "application/pdf"
+            if ext == ".docx":
+                mime_type = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            elif ext == ".txt":
+                mime_type = "text/plain"
             files.append(
-                ("files", (file.name, file.getvalue(), "application/pdf"))
+                ("files", (file.name, file.getvalue(), mime_type))
             )
 
         with st.spinner("Uploading and processing..."):
@@ -59,7 +65,8 @@ if uploaded_files:
 
             #create a new varibale function by state_session like basically create a new state and use it only after file uplaoad
             st.session_state.summary=data[-1]["summary"]
-            st.session_state.pdf_ref = uploaded_files[-1]
+            st.session_state.uploaded_file = uploaded_files[-1]
+            st.session_state.uploaded_file_ext = os.path.splitext(uploaded_files[-1].name)[1].lower()
             if "summary" in st.session_state:
                 st.sidebar.subheader("Summary")
                 st.sidebar.markdown(st.session_state.summary)
@@ -72,7 +79,7 @@ if uploaded_files:
 query= "http://127.0.0.1:8000/query"
 
 st.title("Examdoc")
-st.subheader("Open the sidebar to upload pdf :))")
+st.subheader("Open the sidebar to upload a document :))")
 st.divider()
 main_col, right_panel = st.columns([3, 2])
 
@@ -130,8 +137,13 @@ with main_col:
     st.subheader("Document")
 
     with st.container(border=True):
-        if st.session_state.get("pdf_ref"):
-            binary_data = st.session_state.pdf_ref.getvalue()
-            pdf_viewer(input=binary_data, width=550)
+        if st.session_state.get("uploaded_file"):
+            if st.session_state.get("uploaded_file_ext") == ".pdf":
+                binary_data = st.session_state.uploaded_file.getvalue()
+                pdf_viewer(input=binary_data, width=550)
+            else:
+                st.markdown(f"Uploaded file: **{st.session_state.uploaded_file.name}**")
+                if st.session_state.uploaded_file_ext == ".txt":
+                    st.code(st.session_state.uploaded_file.getvalue().decode("utf-8", errors="ignore"), language="text")
         else:
             st.caption("No document loaded")

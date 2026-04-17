@@ -3,11 +3,11 @@ from typing import List
 import os
 from pydantic import BaseModel 
 
-from backend.pdf_extraction import extract_text_and_type
+from backend.pdf_extraction import extract_raw_text
 from backend.pdf_extraction import cleaned_text
 from backend.storage import (
     generate_doc_id,
-    save_pdf,
+    save_file,
     save_text,
     create_metadata,
     save_metadata
@@ -56,8 +56,10 @@ def query_documents(request: QueryRequest):
         "matches": results
     }
 
-UPLOAD_DIR = "uploaded_pdfs"
+UPLOAD_DIR = "uploaded_files"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+ALLOWED_EXTENSIONS = {".pdf", ".docx", ".txt"}
 
 @app.get("/")
 def display():
@@ -67,18 +69,23 @@ async def upload_multiple(files: List[UploadFile] = File(...)):
     results = []
 
     for file in files:
-        pdf_bytes = await file.read()
-        doc_id = generate_doc_id()
-        pdf_path = save_pdf(pdf_bytes, doc_id)
+        file_ext = os.path.splitext(file.filename)[1].lower()
+        if file_ext not in ALLOWED_EXTENSIONS:
+            results.append({"filename": file.filename, "error": f"Unsupported format: {file_ext}"})
+            continue
 
-        raw_text, is_scanned = extract_text_and_type(pdf_path)
+        file_bytes = await file.read()
+        doc_id = generate_doc_id()
+        file_path = save_file(file_bytes, doc_id, file_ext)
+
+        raw_text, is_scanned = extract_raw_text(file_path)
         
 
         clean_text = cleaned_text(raw_text)
         text_path = save_text(clean_text, doc_id)
 
 
-        #propositions = get_propositions("The impact of pop music on people’s perception of gender in daily life is enormous. Just think of it, teenagers sharing their voices with the new single oftheir favorite influencer on Spotify and kids imitating the viral hit’s choreography in their rooms.")
+        #propositions = get_propositions("The impact of pop music on people's perception of gender in daily life is enormous. Just think of it, teenagers sharing their voices with the new single oftheir favorite influencer on Spotify and kids imitating the viral hit's choreography in their rooms.")
         
         #if not propositions:
             #results.append({"doc_id": doc_id, "filename": file.filename, "error": "No propositions extracted"})
@@ -104,7 +111,7 @@ async def upload_multiple(files: List[UploadFile] = File(...)):
         metadata = create_metadata(
             doc_id,
             file.filename,
-            pdf_path,
+            file_path,
             text_path,
             is_scanned,
             len(clean_text),

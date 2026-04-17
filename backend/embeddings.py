@@ -8,4 +8,4 @@ def embeded_chunks(chunks: list[dict]):
 #normalizing embeddings- since magntidue of vector embeddings equals 1, it becomes easy for cosine similarity calculation
     
     return embeddings
-#to do while calling- print shape
+#to do while calling- print shape 

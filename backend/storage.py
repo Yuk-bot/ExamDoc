@@ -2,19 +2,19 @@ import uuid
 import os
 from datetime import datetime
 import json
-from backend.pdf_extraction import extract_text_and_type
+
 def generate_doc_id() -> str:
     return str(uuid.uuid4())
 
 BASE_STORAGE = "storage"
-PDF_DIR = os.path.join(BASE_STORAGE, "original_pdfs")
+UPLOAD_DIR = os.path.join(BASE_STORAGE, "original_files")
 
-os.makedirs(PDF_DIR, exist_ok=True)
+os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-def save_pdf(pdf_bytes, doc_id):#this function returns the path of the saved file- uploaded files
-    path = os.path.join(PDF_DIR, f"{doc_id}.pdf")
+def save_file(file_bytes, doc_id, ext):  #this function returns the path of the saved file- uploaded files
+    path = os.path.join(UPLOAD_DIR, f"{doc_id}{ext}")
     with open(path, "wb") as f:
-        f.write(pdf_bytes)
+        f.write(file_bytes)
     return path
 
 TEXT_DIR = os.path.join(BASE_STORAGE, "texts")
@@ -28,7 +28,7 @@ def save_text(text: str, doc_id): #storing clean text files and returning its pa
 
 def create_metadata(doc_id: str,
     original_name: str,
-    pdf_path: str,
+    file_path: str,
     text_path: str,
     is_scanned: bool,
     text_length: int):
@@ -36,7 +36,7 @@ def create_metadata(doc_id: str,
     return {
         "doc_id": doc_id,
         "original_filename": original_name,
-        "pdf_path": pdf_path,
+        "file_path": file_path,
         "text_path": text_path,
         "is_scanned": is_scanned,
         "text_length": text_length,
@@ -92,17 +92,3 @@ def validate_chunks(chunks: list[dict]):
             valid.append(c)
 
     return valid
-
-
-
-
-
-
-
-
-
-
-
-
-
-
