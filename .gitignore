@@ -1,9 +1,25 @@
+
+storage/
+
+# Uploads
+uploaded_files/
+uploaded_pdfs/
 backend/uploaded_pdfs/
 
-backend/storage/faiss/
-.env
+
+*.faiss
+
+# Python
 __pycache__/
 *.pyc
+
+# Env
+.env
 .venv/
+myenv/
+
+# Logs
 *.log
+
+# Node
 node_modules/
