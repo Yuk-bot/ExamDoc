@@ -1,0 +1,106 @@
+MAIN FEATURES (PRIORITY LIST)
+1Topographic (NON-SEASONAL – most important)
+These never change with season.
+1. Elevation (DEM)
+○ Water accumulates in low-lying areas
+2. Slope
+○ Permanent water exists on very gentle slopes
+3. Flow Accumulation
+○ Indicates drainage lines, tanks, and ponding zones
+If examiner asks:
+“Topographic features help identify natural water-holding
+locations.”
+Spectral (MADE non-seasonal using multi-year data)
+4. Median MNDWI (multi-year)
+○ Strong indicator of water presence
+○ Median removes seasonal ponds
+5. Water Occurrence (%)
+○ % of time a pixel is detected as water
+○ High value = permanent water
+“Using multi-year median and occurrence removes
+seasonality.”
+Radar (SAR – cloud & season robust)
+6. Median Sentinel-1 VH (or VV)
+○ Water has consistently low backscatter
+7. VV/VH Ratio
+○ Separates open water from wet soil or vegetation
+👉 Why radar:
+“Radar is independent of clouds and lighting conditions.”
+4 Morphological (after vectorization)
+8. Area of Water Body
+○ Very small patches are usually seasonal
+9. Shape / Compactness
+○ Tanks and ponds have regular shapes
+○ Seasonal puddles are irregular
+Static topography & hydrology (most reliable —
+inherently non-seasonal)
+1. Elevation (DEM value) — water collects in low elevation.
+How: SRTM/AWS DEM → QGIS raster.
+2. Slope — flat areas favor permanent water.
+How: QGIS Raster → Terrain analysis → Slope.
+3. Curvature / Plan curvature — helps separate depressions vs. ridges.
+How: QGIS terrain tools.
+4. Flow accumulation / Flow direction / Drainage network — identifies channels and
+ponding zones.
+How: QGIS SAGA or GRASS hydrology tools from DEM.
+5. Topographic Wetness Index (TWI) — static proxy for potential soil moisture /
+saturation.
+How: derive from flow accumulation and slope in QGIS.
+6. Catchment area / Upslope contributing area — larger contributing area implies
+persistent hydrology.
+How: use watershed tools on DEM.
+2) Long-term / composite spectral features (make
+non-seasonal by using multi-year statistics)
+7. Median NIR, SWIR, Red (multi-year median) — stable spectral signature; water → low
+NIR/SWIR.
+How: build multi-year Sentinel-2 median composite (cloud-masked) in SNAP or Google
+Earth Engine; export to QGIS.
+8. Median MNDWI / MNDWI median — water index but use median across years to
+remove seasonal ponds.
+How: compute MNDWI per scene then take median.
+9. Inter-quartile range (IQR) or SD of NDWI across years — low variance implies
+perennial water (useful as a feature: low SD → stable water or stable land).
+How: create per-pixel stddev or IQR raster from stack.
+10. Maximum water-likelihood (e.g., % of time pixel classified as water across years)
+— a permanence probability.
+How: classify each date then compute percent occurrence (makes “permanent water”
+feature).
+3) Radar (SAR) features — robust to clouds, less affected
+by seasonality if using multi-year)
+11. Median VV / VH backscatter (Sentinel-1) — water usually shows very low backscatter
+(specular).
+How: process Sentinel-1 in SNAP (orbit file, thermal noise, speckle filter), stack and take
+median.
+12. VV/VH ratio or difference — can separate vegetation / wet soil from open water.
+How: compute raster math on radar bands.
+13. GLCM texture on SAR median (contrast, homogeneity) — water gives distinct
+low-texture signature.
+How: compute GLCM in QGIS/SAGA on SAR median.
+4) Morphological & shape features (derived from
+candidate water polygons)
+14. Polygon compactness / elongation / area — reservoirs, tanks, and natural lakes have
+different shapes than ephemeral puddles.
+How: convert candidate raster to polygons in QGIS and compute shape metrics in
+attribute table.
+15. Edge sharpness (boundary contrast) — permanent water often has sharp spectral
+contrast with surrounding land.
+How: use focal filters or compute boundary NDWI gradient.
+5) Proximity / contextual features (static)
+16. Distance to mapped perennial streams — ponds adjacent to perennial streams more
+likely permanent.
+How: derive stream network from DEM or use existing hydro layers; compute distance
+raster.
+17. Distance to roads / settlements — man-made tanks often near infrastructure (useful
+for distinguishing tanks vs. natural depressions).
+How: use vector layers + QGIS Distance to nearest hub.
+18. Soil type / Infiltration class — clayey soils favor longer water retention.
+How: attach soil map polygons as categorical features.
+19. Geology / lithology — bedrock vs alluvium affects permanence.
+How: use state geological maps as vector attributes.
+6) Landcover / ancillary stable layers
+20. Land use / landcover (long-term product) — e.g., irrigated lands vs. natural
+vegetation; stable LULC layers help contextualize.
+How: use an official LULC mosaic or multi-year mode LULC.
+21. Permanent water mask (global products) — e.g., JRC Global Surface Water
+permanence raster — use as a feature (treat as prior).
+How: ingest as a categorical raster layer (if allowed).

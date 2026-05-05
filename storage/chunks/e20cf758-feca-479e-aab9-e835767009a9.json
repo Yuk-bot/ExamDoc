@@ -1,0 +1,17 @@
+[
+  {
+    "doc_id": "e20cf758-feca-479e-aab9-e835767009a9",
+    "chunk_index": 0,
+    "text": "1⃣ Verify & harden the RAG behavior (VERY important)\nBefore adding features, make sure the system is reliable.\nDo this:\n● Test easy questions (directly present in text)\n● Test paraphrased questions\n● Test negative questions (answer not in docs)\nAdd:\n● Confidence threshold (if similarity too low → say “Not found in documents”)\n● Max context length (avoid LLM overload)\n👉 This prevents hallucinations.\n2⃣ Add citations / sources (huge credibility boost)\nRight now answers feel “magic”. Make them verifiable.\nWhat to add:\n● For each chunk:\n○ document name\n○ page / section\n● Return:\n○ answer\n○ list of chunks used\nResult:\nAnswer + “Based on Document X, Page Y”\nThis is how real-world RAG apps work.\n3⃣"
+  },
+  {
+    "doc_id": "e20cf758-feca-479e-aab9-e835767009a9",
+    "chunk_index": 1,
+    "text": "name\n○ page / section\n● Return:\n○ answer\n○ list of chunks used\nResult:\nAnswer + “Based on Document X, Page Y”\nThis is how real-world RAG apps work.\n3⃣ Improve context assembly (quality jump)\nYou already assemble context — now refine it.\nEnhancements:\n● Deduplicate similar chunks\n● Order chunks by:\n1. similarity\n2. document\n3. logical flow\n● Trim irrelevant lines (headers, footers)\nResult: better answers with same LLM.\n4⃣ Add conversation memory (optional but powerful)\nTurn queries into a chat, not single-shot Q&A.\nApproaches:\n● Store last N user questions\n● Append short conversation summary to prompt\nNow users can ask:\n“Explain that again”\n“What about the second case?”\n5⃣ Add evaluation & de"
+  },
+  {
+    "doc_id": "e20cf758-feca-479e-aab9-e835767009a9",
+    "chunk_index": 2,
+    "text": "r questions\n● Append short conversation summary to prompt\nNow users can ask:\n“Explain that again”\n“What about the second case?”\n5⃣ Add evaluation & debugging tools\nYou need to see what the system is doing.\nAdd logs for:\n● retrieved chunks\n● similarity scores\n● final context\n● LLM prompt\nThis helps you debug wrong answers fast.\nThings to do next-\nAdd conversation memory\nDo it for multiple files\nStart with Frontend"
+  }
+]

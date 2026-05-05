@@ -1,0 +1,12 @@
+[
+  {
+    "doc_id": "2f98c5dc-750e-44ba-832b-9c6a62d81ae6",
+    "chunk_index": 0,
+    "text": "CS268 Lab\nExperiment-3\nAim: Designand implementation ofBooth's multiplier.\nPrerequisites:\n●Basic understandingof logic gates,multipliers.\n●Basic understandingof Register, Adder,Subtractor,2’s Complement.\nObjective:\n●Understanding Booth'smultiplieralgorithm using Verilogcoding.\nTool:\n●iverilog andgtkwave\nTheory: Booth'smultiplier\n● Booth's multiplication algorithm is an algorithm which multiplies 2 signed integers in 2's\ncomplement, It cuts the number of required partial products in half and it increases the speed by\nreducing the total number of partial product sums that must take place in an normal multiplication\nalgorithm.\n* Booth multiplier code and its test bench is already provided to yo"
+  },
+  {
+    "doc_id": "2f98c5dc-750e-44ba-832b-9c6a62d81ae6",
+    "chunk_index": 1,
+    "text": " partial product sums that must take place in an normal multiplication\nalgorithm.\n* Booth multiplier code and its test bench is already provided to you, the given code is divided in\ntwo module datapath and control path, datapath is further divided in submodules. There is some\nerror inthegivencode.Youhave toperform thefollowing task\n1.First understandtheflow ofcode withaclock pulse.\n2.Try toidentify themodule/submodule whichhasbugs.\n3.Explain thebugand rectifyit."
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "doc_id": "bb8ecb4f-7d1e-4371-9fc0-840acb77f8e0",
+  "original_filename": "1\ufe0f\u20e3 Verify & harden the RAG behavior (VERY important).pdf",
+  "pdf_path": "storage\\original_pdfs\\bb8ecb4f-7d1e-4371-9fc0-840acb77f8e0.pdf",
+  "text_path": "storage\\texts\\bb8ecb4f-7d1e-4371-9fc0-840acb77f8e0.txt",
+  "is_scanned": false,
+  "text_length": 1516,
+  "uploaded_at": "2026-02-01T11:45:19.433104",
+  "chunk_count": 1,
+  "chunk_path": "storage/chunks\\bb8ecb4f-7d1e-4371-9fc0-840acb77f8e0.json"
+}

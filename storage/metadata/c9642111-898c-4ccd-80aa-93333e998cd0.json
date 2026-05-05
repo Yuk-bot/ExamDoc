@@ -1,0 +1,12 @@
+{
+  "doc_id": "c9642111-898c-4ccd-80aa-93333e998cd0",
+  "original_filename": "essay.pdf",
+  "pdf_path": "storage\\original_pdfs\\c9642111-898c-4ccd-80aa-93333e998cd0.pdf",
+  "text_path": "storage\\texts\\c9642111-898c-4ccd-80aa-93333e998cd0.txt",
+  "is_scanned": false,
+  "text_length": 9478,
+  "uploaded_at": "2026-02-02T14:43:58.805481",
+  "chunk_count": 18,
+  "chunk_path": "storage/chunks\\c9642111-898c-4ccd-80aa-93333e998cd0.json",
+  "summary_path": "storage/summary\\c9642111-898c-4ccd-80aa-93333e998cd0.json"
+}

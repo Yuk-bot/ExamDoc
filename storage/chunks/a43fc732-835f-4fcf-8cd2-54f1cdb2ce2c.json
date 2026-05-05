@@ -1,0 +1,42 @@
+[
+  {
+    "doc_id": "a43fc732-835f-4fcf-8cd2-54f1cdb2ce2c",
+    "chunk_index": 0,
+    "text": "ZERVE AI DATATHON — PROBLEM\nSTATEMENT\n1. Introduction\nHealth insurance companies continuously evaluate the risk associated with individual\ncustomers. Accurately identifying high-risk customers—those who are more likely to file\nsignificant health insurance claims—helps insurers improve customer service, reduce fraud,\nand optimize pricing strategies.\nIn this datathon, your goal is to develop a machine-learning model that predicts the likelihood\nof a customer filing a health insurance claim. You will work with an anonymized dataset\ncontaining 50 engineered features.\nThis challenge tests your ability to build robust ML pipelines, handle mixed-type data, and\noptimize models for imbalanced classif"
+  },
+  {
+    "doc_id": "a43fc732-835f-4fcf-8cd2-54f1cdb2ce2c",
+    "chunk_index": 1,
+    "text": "ngineered features.\nThis challenge tests your ability to build robust ML pipelines, handle mixed-type data, and\noptimize models for imbalanced classification.\n2. Objective\nDevelop a machine-learning model that predicts:\nThe probability that a customer will file a health insurance claim (target = 1).\nYour final submission must contain predicted probabilities for each row in the test\ndataset, not the training dataset.\n3. Dataset Description\nTwo datasets will be provided for this datathon:\nA. Training Dataset\n● Contains 50 anonymized features\n● Includes the binary target column (target)\n● Used for model training, experimentation, validation, and tuning\nB. Test Dataset\n● Contains the same 50 ano"
+  },
+  {
+    "doc_id": "a43fc732-835f-4fcf-8cd2-54f1cdb2ce2c",
+    "chunk_index": 2,
+    "text": "cludes the binary target column (target)\n● Used for model training, experimentation, validation, and tuning\nB. Test Dataset\n● Contains the same 50 anonymized features\n● Does NOT contain the target column\n● Your predictions must be generated on this dataset\n● Evaluation will be performed using hidden true labels\nAll personally identifiable information has been removed, and original domain-specific\nfeature names have been replaced with generic identifiers.\n3.1 Feature Types\nBinary Features (0/1)\nfeature_4\nfeature_5\nfeature_6\nfeature_11\nfeature_14\nfeature_16\nfeature_18\nfeature_19\nfeature_20\nfeature_21\nfeature_22\nfeature_27\nfeature_30\nfeature_32\nfeature_41\nfeature_44\nfeature_46\nCategorical Featu"
+  },
+  {
+    "doc_id": "a43fc732-835f-4fcf-8cd2-54f1cdb2ce2c",
+    "chunk_index": 3,
+    "text": "\nfeature_16\nfeature_18\nfeature_19\nfeature_20\nfeature_21\nfeature_22\nfeature_27\nfeature_30\nfeature_32\nfeature_41\nfeature_44\nfeature_46\nCategorical Features\nfeature_3\nfeature_7\nfeature_8\nfeature_12\nfeature_15\nfeature_23\nfeature_25\nfeature_28\nfeature_31\nfeature_34\nfeature_35\nfeature_39\nfeature_42\nfeature_49\nNumeric / Continuous Features\nfeature_1\nfeature_2\nfeature_9\nfeature_10\nfeature_13\nfeature_17\nfeature_24\nfeature_26\nfeature_29\nfeature_33\nfeature_36\nfeature_37\nfeature_38\nfeature_40\nfeature_43\nfeature_45\nfeature_47\nfeature_48\nfeature_50\n3.2 Target Variable\nColumn: target\n● 1 → Customer filed a significant health insurance claim\n● 0 → Customer did not file a claim\nThe target variable is present"
+  },
+  {
+    "doc_id": "a43fc732-835f-4fcf-8cd2-54f1cdb2ce2c",
+    "chunk_index": 4,
+    "text": "t Variable\nColumn: target\n● 1 → Customer filed a significant health insurance claim\n● 0 → Customer did not file a claim\nThe target variable is present only in the training dataset.\nThe test dataset does not contain the target and is used solely for prediction.\nThe dataset is imbalanced, meaning that claim events are relatively rare. Handling this\nimbalance effectively is essential for achieving strong performance.\n4. Evaluation Metric — Normalized Gini Coefficient\nThe official leaderboard metric is:\nNormalized Gini Coefficient\nThe Gini coefficient measures how well the ranking of predicted probabilities differentiates\nbetween claim and non-claim customers.\nWhy Gini?\n● It directly measures mo"
+  },
+  {
+    "doc_id": "a43fc732-835f-4fcf-8cd2-54f1cdb2ce2c",
+    "chunk_index": 5,
+    "text": "ent measures how well the ranking of predicted probabilities differentiates\nbetween claim and non-claim customers.\nWhy Gini?\n● It directly measures model discrimination ability\n● It is highly sensitive to ranking quality\n● It is widely used in insurance risk modeling\n● It performs well with imbalanced datasets\nFormula Overview\nNormalized Gini =\n(Gini(model predictions) / Gini(perfect model))\nYour model must output a probability between 0 and 1 for each test dataset row.\n5. Scoring & Judging Criteria\nFinal evaluation will be based on two equally weighted components:\n1. Model Performance (50%)\n● Evaluated using the Normalized Gini Coefficient on the hidden test dataset\n● Higher Normalized Gini"
+  },
+  {
+    "doc_id": "a43fc732-835f-4fcf-8cd2-54f1cdb2ce2c",
+    "chunk_index": 6,
+    "text": " weighted components:\n1. Model Performance (50%)\n● Evaluated using the Normalized Gini Coefficient on the hidden test dataset\n● Higher Normalized Gini → better ranking\n2. Final Presentation (50%)\nShortlisted teams will present:\n● Methodology and approach\n● Feature engineering\n● Handling of missing values and imbalance\n● Validation strategy\n● Model selection and tuning\n● Insights, reasoning, and interpretation\nJudges will assess:\n● Technical clarity\n● Methodological rigor\n● Creativity and innovation\n● Communication quality\nFinal Score Formula\nFinal Score = 0.5 × Normalized Gini + 0.5 × Presentation Score\n6. Submission Format\nParticipants must submit:\nA. Prediction File (CSV)\nFor every row in "
+  },
+  {
+    "doc_id": "a43fc732-835f-4fcf-8cd2-54f1cdb2ce2c",
+    "chunk_index": 7,
+    "text": "nal Score = 0.5 × Normalized Gini + 0.5 × Presentation Score\n6. Submission Format\nParticipants must submit:\nA. Prediction File (CSV)\nFor every row in the test dataset, the file must contain:\n● id → Row identifier (same order as test dataset)\n● target → Predicted probability (between 0 and 1)\nB. Zerve Canvas\n● Your final working code and notebook must be submitted in a Zerve Canvas\n● This will be reviewed during the final presentation round\n7. Timeline\n● Submission Deadline (Prediction CSV): 20th December 2025\n● Final Presentations: 23rd December 2025"
+  }
+]

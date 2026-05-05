@@ -1,0 +1,97 @@
+[
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 0,
+    "text": "Participant Rulebook\nIntroduction:\n- A month-long program starting in December for students to start their journey in the\nworld of open source, the ONLY requirement being an enthusiastic heart to learn.\n- Explore and find out your interests by contributing to projects from different fields: App,\nWeb, Design, Blockchain, Cybersecurity, and more!\n- Countless projects designed and created from these fields that will be hosted on\nGitHub for you to contribute to! Gain points, climb the leaderboard, and win exciting\nrewards!\nPre-requirements\n- Basic knowledge of Git/GitHub will help you contribute to the projects\neasily, and,\n- Nothing more! You will have to learn-and-apply as you progress through"
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 1,
+    "text": "knowledge of Git/GitHub will help you contribute to the projects\neasily, and,\n- Nothing more! You will have to learn-and-apply as you progress through this month\nfilled with events! Ofcourse, knowledge of certain tech-stacks will give you an advantage,\nbut we recommend you to explore as much as you can!\n- In addition to registration on Unstop, make sure you have registered at\nhttps://events.geekhaven.in/ for the leaderboard tracking. If you haven't\nregistered then points can not be awarded.\nHow does OpenCode work?\nThe steps are very similar to contributing in any typical open-source\nproject. This will ensure that OpenCode can be an opening door for you to\ncontribute to bigger projects out th"
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 2,
+    "text": "contributing in any typical open-source\nproject. This will ensure that OpenCode can be an opening door for you to\ncontribute to bigger projects out there, and help you participate in events\nsuch as GSoC.\nThrough OpenCode, you will not just gain experience working with new\ntechnologies and open-source projects, but you will also get the chance to expand\nyour network by connecting with others who are more experienced in the\nfield.\nThere will be a number of projects (or repositories) hosted on the OpenCode\n‘25 Organization in GitHub upon the commencement of the event. Each\nproject will have a number of issues rolling out with a certain frequency for\nthe entirety of the month. Each project will "
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 3,
+    "text": "ncement of the event. Each\nproject will have a number of issues rolling out with a certain frequency for\nthe entirety of the month. Each project will have 1-2 mentors assigned to\nthem, who will be responsible for handling those projects, and attending to\nthe queries/PRs of the participants in their projects.\nThe entire event is based on a leaderboard system, where participants gain\ndifferent amount of points based on the difficulty of the issue that they\ncomplete.\nThese points will be predetermined and announced in advance to maximize\ntransparency. It will also be ensured that no one project has a lot more\ntasks than the other projects; i.e., the points distribution between projects\nwill be "
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 4,
+    "text": "ncy. It will also be ensured that no one project has a lot more\ntasks than the other projects; i.e., the points distribution between projects\nwill be kept uniform as best as possible.\nThere is no restriction to how many projects you can contribute to in the event.\nYou are free to explore all the projects, and contribute to all of them, the only\nrestriction being that you cannot have 3 first-come issues assigned to you\nat any time across all repos in OpenCode ‘25 Organization (and only one\nfirst-come issue per repo at a moment).\nRules:\n1) Read a project:\nThere will be a tonne of projects hosted on GitHub. Open a project, read\nthrough its README file, and understand what the project is about. "
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 5,
+    "text": " project:\nThere will be a tonne of projects hosted on GitHub. Open a project, read\nthrough its README file, and understand what the project is about. If it\nexcites you, do not hold back from contributing to it!\n2) Claim an Issue:\nEach project will have multiple issues, or tasks, that you can choose to solve. The point is,\nyou don’t need to necessarily know how to complete the issue\nbeforehand! This will be your opening door to learn something new.\nThere will mainly be 3 kinds of issues:\na) Open-for-all issues (OFA): issues that do not require to be claimed. They\nmay have flexible time-frames. These issues can be solved by everyone,\nand do not require to be claimed by anyone.\nb) Competitive i"
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 6,
+    "text": "o be claimed. They\nmay have flexible time-frames. These issues can be solved by everyone,\nand do not require to be claimed by anyone.\nb) Competitive issues: These are the issues that can be tried by everyone\n(without without requiring to be claimed), but only the best PR in terms of\nquality and code will receive points. Selecting the best PR is up to the\nmentor.\nc) First-come issues: These are the issues that would be assigned to the person\nwho claims them first. You can only be assigned to 3 such issues at any\nmoment, across all repositories of the event (one issue per repo at any given\nmoment),\nwhich means you can work on 3 repos at any moment, with one such issue\non each repo.\nYou will be"
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 7,
+    "text": "f the event (one issue per repo at any given\nmoment),\nwhich means you can work on 3 repos at any moment, with one such issue\non each repo.\nYou will be given a time of 2 days to work on them, and an additional of\nmaximum 12 hours if the mentor allows it. Violating any of the rules or\nspamming may result in points deduction or a ban from the Event.\nIf you’re not able to complete the issue within the given time-frame, you will\nnot be allowed to work on the same issue again. The next user to claim the\nissue\nonce the issue is up-for-grabs will be assigned the issue, and the timer will\nreset. This is irrespective of who was second to claim the issue originally.\n- Arguing or misbehaving with the me"
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 8,
+    "text": "signed the issue, and the timer will\nreset. This is irrespective of who was second to claim the issue originally.\n- Arguing or misbehaving with the mentor relating to these tasks or issues\nwill penalize you.\n- NOTE: the amount of points for each issue will vary depending on the\ndifficulty of the issue, and this will be decided and informed to you by the\nmentor of that repository. Generally, OFA issues will have lesser points than\nthe Competitive or First-come issues, but this can vary.\n3) Complete the issue:\nAfter claiming the issue, now it’s time to explore ways on how to proceed with completing\nthe issue. Research ways to complete the issue, test them, and check to see which suits\nthe best"
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 9,
+    "text": "ime to explore ways on how to proceed with completing\nthe issue. Research ways to complete the issue, test them, and check to see which suits\nthe best! Make sure to read the issue well and solve all that the issue demands. If\nsomething is not clear about the issue, get it clarified with the mentor of that repo\n(repository) but do remember that the mentor is meant to guide you, not help you. They\ncan provide you with helpful resources should you require them.\n4) CONTRIBUTING.md:\nEach project may have a CONTRIBUTING.md file, that will enlist the necessary steps you\nmust take to contribute to that project/repo. If a PR (Pull Request) does not follow these\nsteps, it will not be accepted and you "
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 10,
+    "text": "necessary steps you\nmust take to contribute to that project/repo. If a PR (Pull Request) does not follow these\nsteps, it will not be accepted and you will not gain points. In case a project does not\ncontain a CONTRIBUTING.md file or similar, ensure that you get it clarified with the\nmentors of that project.\n5) Open a Pull Request (PR):\nOnce you’re confident with the changes you’ve made or the implementation that you’ve\ndone, it’s time to request for these changes to be incorporated into the project. Following\nthe template mentioned for that project, head over to GitHub and open a PR. Once done,\nit’s time to wait until your changes are reviewed by a mentor.\nIt’s important to follow a few rule"
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 11,
+    "text": "ject, head over to GitHub and open a PR. Once done,\nit’s time to wait until your changes are reviewed by a mentor.\nIt’s important to follow a few rules while opening the PR. Not following these\nrules may result in your PR not being reviewed/accepted.\n- It is a must to fork the repo to your account first. Once done, complete the task in your\nfork (this step varies from repo-to-repo. Some may require you to create a new branch in\nthe fork). Having done this, you are set to make a PR to the project that you’re\ncontributing to. Make sure there are no merge conflicts.\n- The PR title should be meaningful and relevant to the issue that it’s solving.\n- All the PRs MUST have “Issue: #<issue_number>” "
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 12,
+    "text": "no merge conflicts.\n- The PR title should be meaningful and relevant to the issue that it’s solving.\n- All the PRs MUST have “Issue: #<issue_number>” (the # is not a typo. It is part of the\ntemplate) in the first line of the PR description. Not doing so WILL NOT update your\npoints in the leaderboard, even if it is accepted by the mentor. See the image below to\nsee what a “valid” PR looks like:\n- If your PR is valid, you will get a message from our GitHub bot, saying that you’ve\nfollowed the template. If you raise an invalid PR (not following the template), the bot will\nwarn you for the\nsame, and you will have to modify your PR accordingly. Contact a mentor ONLY\nIF REQUIRED. The following ima"
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 13,
+    "text": "e template), the bot will\nwarn you for the\nsame, and you will have to modify your PR accordingly. Contact a mentor ONLY\nIF REQUIRED. The following images show what messages you may get:\n1) Valid PR:\n2) PR Merged:\n3) Invalid PR:\n- It is required for you to work on the same PR if any changes are suggested (i.e., modify\nthe invalid template to make it valid, or any other changes). You should not close the PR\nand create a new one, unless the mentor asks for it. Any further changes in that PR must\nbe done within that PR.\nThe mentor may suggest changes to be made and once satisfied, will accept your PR to be\nmerged into the project, helping you gain valuable points.\nFAQs:\n1) What if I get some que"
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 14,
+    "text": "es to be made and once satisfied, will accept your PR to be\nmerged into the project, helping you gain valuable points.\nFAQs:\n1) What if I get some query regarding the issue I’m assigned to? Where\ncan I seek help from the mentor?\n- You can either message the mentor on the thread of that issue, or more\npreferably, ping any of the mentors in the Discord channel corresponding to\nthat project. It is a must for all the participants to join the Discord Server\nof OpenCode\n- The mentor may also link resources that may help you solve a particular\nissue. These resources will be accessible only through the discord server,\nto ensure transparency to other participants, and accessibility to those\nresources"
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 15,
+    "text": "These resources will be accessible only through the discord server,\nto ensure transparency to other participants, and accessibility to those\nresources by others as well.\n2) How do I know when an issue is opened? What are the chances of\nme being assigned an issue, as others may claim it before me?\n- You can “watch” the repository that you’re interested in, so that you get\nnotifications by mail when some new activity happens in that repository.\nYou also receive updates in the Discord server when a new issue is\nopened in a repository. You will have to stay on the watch for new\nissues.\n- There will also be open-for-all issues that can be contributed to by\neveryone, in case you are not able to fi"
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 16,
+    "text": "e to stay on the watch for new\nissues.\n- There will also be open-for-all issues that can be contributed to by\neveryone, in case you are not able to find time to claim an issue.\n3) I feel that someone is cheating/misusing the rules to gain points, or\nsomeone is purposely claiming issues without solving them. What should I\ndo?\n- Your first point of contact for any problems would be the mentor of that\nrepository if it is related to some project. We will make sure that every\nparticipant has a fair participation in OpenCode. Any miscreants found will\nstrictly be penalized,\nand may even be restricted from participating in further OpenCode events.\nYou can also ping any mentor in the Discord server "
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 17,
+    "text": "l\nstrictly be penalized,\nand may even be restricted from participating in further OpenCode events.\nYou can also ping any mentor in the Discord server if the specific mentor of that\nrepository is NA.\n- Do not take the matter in your own hands. It is our responsibility to look into\nit. Be sure to be ethical at all times, to avoid getting penalized yourself.\nWhat next?\nWell, that’s what you’re gonna have to do for the entire month! Scout for projects,\nclaim issues, solve them, and climb the leaderboard. These contributions will help\nyou step into the real world of open-source out there by prepping you with some\nfancy tech- stacks, and more importantly, ethics and practices to be followed.\nCheck"
+  },
+  {
+    "doc_id": "48582170-6109-4d22-aea5-fa162c23ac1a",
+    "chunk_index": 18,
+    "text": "the real world of open-source out there by prepping you with some\nfancy tech- stacks, and more importantly, ethics and practices to be followed.\nCheck out the GitHub page of OpenCode to view past projects, and learn more about it! Do\nfollow GeekHaven on your socials to stay updated with the event. See you there!\nJoin the Discord server of OpenCode!\nGitHub (OpenCode)\nInstagram\n(GeekHaven) LinkedIn\n(GeekHaven) X\n(GeekHaven)\nFacebook (GeekHaven)\nGeekHaven's Website"
+  }
+]

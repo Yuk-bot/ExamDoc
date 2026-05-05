@@ -1,0 +1,12 @@
+{
+  "doc_id": "d5b70585-9024-48e1-8f79-0cc8e1fa8a1d",
+  "original_filename": "test.txt",
+  "file_path": "storage\\original_files\\d5b70585-9024-48e1-8f79-0cc8e1fa8a1d.txt",
+  "text_path": "storage\\texts\\d5b70585-9024-48e1-8f79-0cc8e1fa8a1d.txt",
+  "is_scanned": false,
+  "text_length": 42,
+  "uploaded_at": "2026-04-10T14:25:28.684028",
+  "chunk_count": 0,
+  "chunk_path": "storage/chunks\\d5b70585-9024-48e1-8f79-0cc8e1fa8a1d.json",
+  "summary_path": "storage/summary\\d5b70585-9024-48e1-8f79-0cc8e1fa8a1d.json"
+}

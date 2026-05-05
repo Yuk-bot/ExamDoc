@@ -1,0 +1,181 @@
+WhiteBox Testing
+A white-box testing strategy can either be
+coverage-based or fault based.
+Fault-based testing
+• A fault-based testing strategy targets to
+detect certain types of faults.
+• These faults that a test strategy focuses on
+constitutes the fault mod el of the strategy.
+• An example of a fault-based strategy is
+mutation testing.
+Coverage-based testing:
+• A coverage-based testing strategy attempts to
+execute (or cover) certain elements of a
+program.
+• Popular examples of coverage-based testing
+strategies are statement coverage, branch
+coverage, multiple condition coverage, and
+path coverage-based testing.
+Testing criterion for coverage-based testing:
+• A coverage-based testing strategy typically targets to
+execute (i.e., cover) certain program elements for
+discovering failures.
+• For example, if a testing strategy requires all the
+statements of a program to be executed at least once, then
+we say that the testing criterion of the strategy is
+statement coverage.
+• A white-box testing strategy is said to be stronger than
+another strategy, if the stronger testing strategy covers all
+program elements covered by the weaker testing strategy,
+and the stronger strategy additionally covers at least one
+program element that is not covered by the weaker
+strategy.
+• When none of two testing strategies fully covers the
+program elements exercised by the other, then the two are
+called complementary testing strategies. The concepts of
+stronger, weaker, and complementary testing are
+schematically illustrated in Figure 10.6.
+Statement Coverage:
+• The statement coverage strategy aims to
+design test cases so as to execute every
+statement in a program at least once.
+• The principal idea governing the statement
+coverage strategy is that unless a statement is
+executed, there is no way to determine
+whether an error exists in that statement.
+• Example 10.11 Design statement coverage-based
+test suite for the following Euclid’s GCD
+computation program:
+• int computeGCD(int x, int y) {
+• 1 while (x != y) {
+• 2 if (x > y)
+• 3 x = x - y;
+• 4 else
+• 5 y = y - x;
+• 6 }
+• 7 return x;
+• }
+• Answer: To design the test cases for the
+statement coverage, the conditional
+expression of the while statement needs to be
+made true and the conditional expression of
+the if statement needs to be made both true
+and false. By choosing the test set {(x = 3, y =
+3), (x = 4, y = 3), (x = 3, y =4)}, all statements of
+the program would be executed at least once.
+• Coverage explanation:
+• TC1 (3,3)
+– Condition x != y is false → loop body (lines 2–5) is not
+entered but return x; (line 7) is executed.
+– So lines ①,⑦ are covered.
+• TC2 (4,3)
+– Loop runs: 4≠3 → enter while; 4>3 → execute line 3;
+repeatedly subtract until x==y.
+– Statements ①,②,③,⑤,⑦ all get executed at least
+once.
+• TC3 (3,4)
+– Similar, but now 3<4 → this forces the else branch (line 5)
+when x<=y in the loop.
+– Ensures line 4 and 5 are exercised.
+• Thus, all statements (1–7) are covered, giving 100%
+statement coverage
+Branch Coverage:
+• For branch coverage each branch in the CFG
+representation of the program must be taken
+at least once, when the test suite is executed.
+• Branch testing is also known as edge testing,
+since in this testing scheme, each edge of a
+program’s control flow graph is traversed at
+least once.
+• For the program of Example 10.11, determine a test
+suite to achieve branch coverage.
+• Answer: The test suite {(x = 3, y = 3), (x = 3, y = 2), (x =
+4, y = 3), (x = 3, y = 4)} achieves branch coverage.
+• For this program, the branches are:
+• Branch A: while (x != y) → true (loop body) and false
+(exit).
+• Branch B: if (x > y) → true (then‑branch, line 3) and
+false (else‑branch, line 5).
+• It is easy to show that branch coverage-based testing is
+a stronger testing than statement coverage-based
+testing.
+• We can prove this by showing that branch coverage
+ensures statement coverage, but not vice versa.
+Theorem 10.1 Branch coverage-based testing is
+stronger than statement coverage-based testing.
+Proof: We need to show that (a) branch coverage
+ensures statement coverage, and (b) statement
+coverage does not ensure branch coverage.
+(a) Branch testing would guarantee statement
+coverage since every statement must belong to
+some branch (assuming that there is no
+unreachable code).
+(b) (b) To show that statement coverage does not
+ensure branch coverage, it would be sufficient
+to give an example of a test suite that achieves
+statement coverage, but does not cover at least
+one branch.
+Multiple Condition Coverage:
+a composite condition:
+• A composite conditional expression is something like:
+((c1 && c2) || c3)
+Here, the components are c1, c2, and c3 (each is a simple true/false condition).
+• Goal in multiple‑condition (MC) coverage is to test all possible
+combinations of true/false values for these components.
+• What MC coverage requires
+• In multiple‑condition coverage‑based testing, you design test cases so that:
+• Each component condition (c1, c2, c3) is made to be true in at least one test.
+• Each component condition is also made to be false in at least one test.
+• And more strictly:
+• You test all possible combinations of c1, c2, c3 being true/false (like a full truth
+table).
+• For example, for ((c1 && c2) || c3) you explicitly test all 3‑bit combinations:
+• (T, T, T), (T, T, F), (T, F, T), (T, F, F),
+• (F, T, T), (F, T, F), (F, F, T), (F, F, F).
+• That’s 8 test cases for 3 components.
+• How many test cases are needed?
+• If a composite condition has n component conditions,
+then there are 2^n possible combinations
+of true/false values.
+• So:
+• For n = 1 → 2 test cases.
+• For n = 2 →4 test cases.
+• For n = 3 → 8 test cases.
+• For n = 10 → 1024 test cases!
+• Hence the number of test cases grows
+exponentially with the number of conditions.
+• That’s why MC coverage is practical only when n is
+small (say, 2–4 conditions); otherwise the test suite
+becomes too large.
+Here’s a simple‑step explanation of
+how multiple‑condition coverage can catch a fault
+that branch coverage misses:
+Example:
+if (temperature > 150 || temperature > 50)
+setWarningLightOn();
+Bug:
+The second condition should be temperature < 50,
+not temperature > 50. The correct logic should be:
+if (temperature > 150 || temperature < 50)
+setWarningLightOn();
+Right now the buggy code turns the warning light on for
+all temperatures >50, including 60, 100, 140 (which
+should be safe)
+• The branch‑coverage test suite
+• Test suite:
+• temperature = 160
+• temperature = 40
+• Check what happens:
+• Test 1: temperature = 160
+– 160 > 150 → true
+– 160 > 50 → true
+– (true || true) → true → call setWarningLightOn() → if‑true branch
+taken.
+• Test 2: temperature = 40
+– 40 > 150 → false
+– 40 > 50 → false
+– (false || false) → false → don’t call setWarningLightOn() → if‑false
+branch taken.
+• So branch coverage is 100%: both true and false outcomes of
+the if‑condition are tested.
+But no test checks values between 50 and 150, like 60, 100, or 140

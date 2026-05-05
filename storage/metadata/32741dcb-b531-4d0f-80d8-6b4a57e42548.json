@@ -1,0 +1,12 @@
+{
+  "doc_id": "32741dcb-b531-4d0f-80d8-6b4a57e42548",
+  "original_filename": "test.pdf",
+  "pdf_path": "storage\\original_pdfs\\32741dcb-b531-4d0f-80d8-6b4a57e42548.pdf",
+  "text_path": "storage\\texts\\32741dcb-b531-4d0f-80d8-6b4a57e42548.txt",
+  "is_scanned": true,
+  "text_length": 3101,
+  "uploaded_at": "2026-02-03T15:03:50.442226",
+  "chunk_count": 6,
+  "chunk_path": "storage/chunks\\32741dcb-b531-4d0f-80d8-6b4a57e42548.json",
+  "summary_path": "storage/summary\\32741dcb-b531-4d0f-80d8-6b4a57e42548.json"
+}

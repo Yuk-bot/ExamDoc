@@ -1,0 +1,272 @@
+[
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 0,
+    "text": "03/04/2026 Feature study of 15 listed water bodies (which are to be actually\nidentified and classified for Bhilwara). We studied 15 water structures by\nunderstanding their purpose, features, and how to identify them. Classification of the\nwaterbodies would be done with the help of these features.\n1. Anicut\n1. What it is\n● Stone/masonry weir built across the full width of a river to raise water level\nand divert water into canals\n● Primary purpose: irrigation water diversion — not storage or recharge\n● Common in South India (e.g., Kallanai, Tamil Nadu); requires stream gradient\n>1:100\n2. Key Physical & Geographical Features\n● Perimeter: 100–2000 m (full river span); Area: 0.01–1 ha (impoundmen"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 1,
+    "text": " Nadu); requires stream gradient\n>1:100\n2. Key Physical & Geographical Features\n● Perimeter: 100–2000 m (full river span); Area: 0.01–1 ha (impoundment)\n● Height: 3–6 m; Crest width: 10–20 m (broad, allows overflow)\n● Embankment slope: 1:0.5 to 1:1 (stone interlocking, no mortar)\n● Upstream depth: 0.5–3 m; Riverbed slope: 0–2%\n● Storage: 0.1–1 MCM (transient pooling); Infiltration: <12.7 mm/hr\n● Recharge: 0.1–0.3 MCM/yr (indirect seepage only); Diversion efficiency:\n70–90%\n● Shape compactness: 5–10 (linear/curved); L:W ratio: >5\n● Shape: Linear to slightly curved band spanning full river width; narrow\ntransverse profile; L:W ratio >5\n● Size: Length 100–2000 m; crest width 10–20 m; impoundmen"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 2,
+    "text": " to slightly curved band spanning full river width; narrow\ntransverse profile; L:W ratio >5\n● Size: Length 100–2000 m; crest width 10–20 m; impoundment area 0.01–1\nha\n● Texture: Smooth to slightly rough stone/masonry surface; distinct straight or\ncurved edge along river channel\n● Association: Located within active river channel; flanked by riparian\nvegetation; associated with canal intake structures on one or both banks\n● Tone: Medium-dark grey (stone/masonry); upstream impoundment appears\nas bright water patch; drier crest shows lighter grey\n● Color: Grey-brown in true colour; upstream water: blue/cyan; NDWI >0.3\nupstream, <0 on crest\n3. How These Features Help Classify It\n● Full river span"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 3,
+    "text": " Color: Grey-brown in true colour; upstream water: blue/cyan; NDWI >0.3\nupstream, <0 on crest\n3. How These Features Help Classify It\n● Full river span + low height (3–6 m) + diversion efficiency 70–90% →\nclassifies as irrigation diversion weir\n● Infiltration <12.7 mm/hr → rules out recharge-focused classification\n● Stone interlocking construction → distinguishes from earthen tanks\n● Variable span = river-fit; stable low height (3–6 m) = key identifier\nGrand anicut dam(tanjavur district)\n2. Continuous Contour Trench (CCT)\n1. What it is\n● Trench dug along contour lines (equal elevation) on slopes to capture runoff\nand recharge groundwater\n● Primary purpose: soil moisture conservation + groundw"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 4,
+    "text": "dug along contour lines (equal elevation) on slopes to capture runoff\nand recharge groundwater\n● Primary purpose: soil moisture conservation + groundwater recharge\n● Used in semi-arid hilly regions; non-continuous segments allow excess water\nto escape\n2. Key Physical & Geographical Features\n● Width: 60 cm; Depth: 30 cm; Berm height: 0.3–0.5 m\n● Segment perimeter: 20–100 m; Area: 0.001–0.1 ha/segment\n● Slope: 2–8%; Vertical interval between rows: 1–3 m; Horizontal spacing: 6–13\nm\n● Storage: 0.2–0.8 m³/trench (56–200 m³/ha total)\n● Infiltration: >12.7 mm/hr; Runoff captured: 20–50%\n● Erosion reduction: 50–70%; Soil moisture increase: +15–25%\n● Shape compactness: 8–15 (trench-like); L:W ratio: "
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 5,
+    "text": ">12.7 mm/hr; Runoff captured: 20–50%\n● Erosion reduction: 50–70%; Soil moisture increase: +15–25%\n● Shape compactness: 8–15 (trench-like); L:W ratio: >8\n● Shape: Thin, elongated linear segments following slope contours; L:W ratio\n>8; multiple parallel rows visible from above\n● Size: Each segment 20–100 m long, ~0.6 m wide; 0.001–0.1 ha per segment;\nhigh density across treated hillslope\n● Texture: Fine linear striations on hillslope; regular spacing pattern; minimal\nsurface relief variation between rows\n● Association: Located on hillslopes (2–8% gradient); degraded or barren land;\noften alongside grass strips or plantation rows\n● Tone: Slightly darker linear bands than surrounding dry soil wh"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 6,
+    "text": " gradient); degraded or barren land;\noften alongside grass strips or plantation rows\n● Tone: Slightly darker linear bands than surrounding dry soil when moist;\nnear-invisible when dry; subtle shadow lines in high-resolution imagery\n● Color: Moist trenches: slightly higher NDWI (0.1–0.2) vs. surrounding bare\nsoil; vegetation in/near trenches appears red in FCC imagery\n3. How These Features Help Classify It\n● Infiltration >12.7 mm/hr + 20–50% runoff capture + contour alignment → slope\nrecharge structure\n● Non-continuous segments → distinguishes from Deep CCT (continuous,\ndeeper)\n● Erosion reduction 50–70% + soil moisture gain → distinguishes from river\nweirs (anicuts)\n● Variable density/ha = s"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 7,
+    "text": "rom Deep CCT (continuous,\ndeeper)\n● Erosion reduction 50–70% + soil moisture gain → distinguishes from river\nweirs (anicuts)\n● Variable density/ha = site-specific; stable cross-section ~2.5:0.6:0.5 m =\nreliable identifier\n3. Deep Continuous Contour Trench (Deep CCT)\n1. What it is\n● Deeper variant of CCT — dug to 1 m depth along contours on hilly/degraded\nland\n● Primary purpose: enhanced groundwater recharge, silt trapping, vegetation\nsupport\n● Used in semi-arid wastelands and degraded hills (0–8% slope)\n2. Key Physical & Geographical Features\n● Depth: 1–2 m; Bund height: 1 m + 0.3 m freeboard; stone pitching on bund\nsides\n● Row spacing: 33 m; Segment perimeter: 20–100 m; Area: 0.001–0.1\nha/s"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 8,
+    "text": " Depth: 1–2 m; Bund height: 1 m + 0.3 m freeboard; stone pitching on bund\nsides\n● Row spacing: 33 m; Segment perimeter: 20–100 m; Area: 0.001–0.1\nha/segment\n● Slope: 2–10%; Storage: 20–30 m³/trench (higher aggregate/ha than CCT)\n● Infiltration: >12.7 mm/hr; Recharge: 30–60% of runoff\n● Erosion reduction: 60–80%; Shape compactness: 8–20; L:W ratio: >10\n● Shape: Wider, more pronounced linear segments along contours; L:W ratio\n>10; raised stone-pitched bund clearly visible on downslope side\n● Size: Segments 20–100 m long; wider cross-section (~1–2 m) than CCT; row\nspacing ~33 m (wider gap between rows than CCT's 6–13 m)\n● Texture: More prominent surface relief than CCT; stone-pitched bund sides"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 9,
+    "text": " m) than CCT; row\nspacing ~33 m (wider gap between rows than CCT's 6–13 m)\n● Texture: More prominent surface relief than CCT; stone-pitched bund sides\ncreate a rougher, coarser texture; micro-relief visible in LiDAR/DEM\n● Association: Degraded hillslopes and wastelands; associated with\nafforestation programmes; recovering vegetation patches contrast with bare\nsurrounding land\n● Tone: Darker shadow lines than CCT in high-resolution imagery due to\ngreater depth; stone bunds appear lighter; moist trench floor appears dark\n● Color: In FCC: deeper green/red vegetation contrast at trench vs.\nsurroundings; NDWI 0.15–0.25 in trench when moist; surrounding bare land\nNDWI <0.05\n3. How These Features H"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 10,
+    "text": "reen/red vegetation contrast at trench vs.\nsurroundings; NDWI 0.15–0.25 in trench when moist; surrounding bare land\nNDWI <0.05\n3. How These Features Help Classify It\n● Depth 1–2 m + stone-pitched bund + 30–60% recharge → deep recharge\nvariant (not shallow CCT)\n● Row spacing 33 m vs. CCT spacing 6–13 m → spatial differentiator\n● Erosion reduction 60–80% + land productivity uplift → classifies above\nshallow CCT\n● Minimum depth 1 m = stable identifier across all sites\n4. Mini Percolation Tank\n1. What it is\n● Small earthen reservoir built across a natural stream to capture monsoon\nrunoff for groundwater recharge\n● Primary purpose: groundwater recharge — water held only days to weeks for\nrapid in"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 11,
+    "text": "natural stream to capture monsoon\nrunoff for groundwater recharge\n● Primary purpose: groundwater recharge — water held only days to weeks for\nrapid infiltration\n● Not designed for long-term irrigation storage\n2. Key Physical & Geographical Features\n● Depth: 3–4.5 m (up to 6 m); Bund length: 50–200+ m; Width: 20–100+ m\n● Storage: 0.1–0.5 MCM (up to 2–5 MCM in high-yield catchments)\n● Infiltration: >12.7 mm/hr; Recharge efficiency: 60–75%\n● Weir crest: 1–2 m above bed; Embankment slope: 1:1.5 to 1:2\n● Silt trap ratio: 1:50; Construction: earthen porous embankment\n● Water duration: days to weeks only\n● Shape: Compact, roughly oval to irregular basin; moderate L:W ratio (2–4);\nearthen bund visib"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 12,
+    "text": "porous embankment\n● Water duration: days to weeks only\n● Shape: Compact, roughly oval to irregular basin; moderate L:W ratio (2–4);\nearthen bund visible as a linear feature across the stream\n● Size: Basin area typically 0.5–5 ha when full; bund length 50–200 m; smaller\nthan a full percolation tank\n● Texture: Smooth water surface when full; muddy/silty exposed bed when dry;\nearthen bund has gently sloping soft texture\n● Association: Located on small natural streams/nallas; upstream catchment\ntypically small (few km²); often surrounded by semi-arid scrubland or\nagricultural fringe\n● Tone: Dark water body during monsoon; bright/pale sandy-silt tone when dry;\nearthen bund slightly darker than su"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 13,
+    "text": "id scrubland or\nagricultural fringe\n● Tone: Dark water body during monsoon; bright/pale sandy-silt tone when dry;\nearthen bund slightly darker than surrounding land\n● Color: When full: blue/dark blue; NDWI >0.3; when dry: NDWI <0;\nsurrounding land NDVI low (scrubland)\n3. How These Features Help Classify It\n● Infiltration >12.7 mm/hr + recharge efficiency 60–75% + short water duration\n→ recharge tank, not irrigation storage\n● Moderate size 0.1–0.5 MCM + compact basin → separates from minor\nirrigation tanks (several MCM, weeks–months)\n● Earthen porous embankment → distinguishes from rigid pakka check dams\n● Variable volume/catchment unreliable; minimum infiltration >12.7 mm/hr = key\nstable ide"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 14,
+    "text": "orous embankment → distinguishes from rigid pakka check dams\n● Variable volume/catchment unreliable; minimum infiltration >12.7 mm/hr = key\nstable identifier\n5. Minor Irrigation Tank\n1. What it is\n● Medium-scale earthen reservoir in a valley capturing seasonal runoff for crop\nirrigation\n● Primary purpose: seasonal irrigation storage — storage volume and duration\nare design priorities\n● Recharge is a by-effect, not the main goal\n2. Key Physical & Geographical Features\n● Water spread: hundreds of ha (e.g., ~189 ha at full level)\n● Bund length: hundreds of metres to >1 km; Depth: 3–6 m\n● Storage: 0.1 to several MCM; water held: weeks to months\n● Construction: compacted earthen bund; Spillway fo"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 15,
+    "text": "ndreds of metres to >1 km; Depth: 3–6 m\n● Storage: 0.1 to several MCM; water held: weeks to months\n● Construction: compacted earthen bund; Spillway for overflow; Sluice at base\nfor controlled release\n● Shape: Large irregular polygon elongated along valley floor; well-defined\nearthen bund as perimeter; sluice structure visible at the toe\n● Size: Water spread hundreds of ha; bund length >500 m to several km;\nsignificantly larger than percolation tanks\n● Texture: Smooth open water surface; exposed bed shows cracked clay/silt\npattern when dry; bund surface is compacted with rough earth texture\n● Association: Valley bottom location; surrounded by agricultural fields forming\na clear command area; "
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 16,
+    "text": " surface is compacted with rough earth texture\n● Association: Valley bottom location; surrounded by agricultural fields forming\na clear command area; canal/sluice network downstream clearly visible\n● Tone: Deep dark blue/black when full; pale grey-white cracked clay when dry;\nbund appears as a lighter brown band around the basin\n● Color: When full: NDWI >0.4; command area downstream shows high NDVI\n(irrigated crops); bund: low NDWI, moderate NDVI (grass cover on bund)\n3. How These Features Help Classify It\n● Large water spread + long bund + storage weeks–months → storage-centric\nirrigation tank\n● Sluice for controlled withdrawal → distinguishes from percolation tanks (no\nsluice)\n● Low rechar"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 17,
+    "text": "rage weeks–months → storage-centric\nirrigation tank\n● Sluice for controlled withdrawal → distinguishes from percolation tanks (no\nsluice)\n● Low recharge focus → rules out recharge classification\n● Sluice + spillway dual control always present = stable identifier\n6. Pakka Check Dam\n1. What it is\n● Low masonry or RCC wall across a stream/gully to slow water flow and trap\nsediment\n● Primary purpose: channel stabilization + erosion control — not recharge or\nirrigation\n● Creates a shallow upstream pond; built in steep or erosion-prone catchments\n2. Key Physical & Geographical Features\n● Length: 5–20 m (channel-constrained); Wall height: 1–3 m; Stored depth:\n<1–2 m\n● Storage: few thousand m³ (up t"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 18,
+    "text": "Key Physical & Geographical Features\n● Length: 5–20 m (channel-constrained); Wall height: 1–3 m; Stored depth:\n<1–2 m\n● Storage: few thousand m³ (up to ~5 MCM)\n● Construction: masonry or RCC (rigid, scour-resistant)\n● Integrated spillway at crest; foundation anchored into bed and banks\n● Shape: Short, straight linear bar perpendicular to stream channel; very small\nupstream impoundment of irregular shape; sharp defined edges\n● Size: Wall length only 5–20 m; upstream impoundment a few hundred m²;\nhighly compact structure\n● Texture: Hard, smooth masonry/RCC surface visually distinct from\nsurrounding earthen terrain; well-defined sharp edges distinguishable from\nloose rubble structures\n● Associa"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 19,
+    "text": "asonry/RCC surface visually distinct from\nsurrounding earthen terrain; well-defined sharp edges distinguishable from\nloose rubble structures\n● Association: Located in active gully or stream channel; steep erosion-prone\nterrain; frequently found in series along the same channel\n● Tone: Bright grey/white masonry in optical imagery; small upstream water\nbody appears dark; downstream channel typically dry and rocky\n● Color: Wall: high reflectance, near-white in true colour; upstream pond: NDWI\n>0.3; masonry wall itself: NDWI <0; NDVI very low at and around structure\n3. How These Features Help Classify It\n● Rigid masonry/RCC + wall height 1–3 m + quick overflow + shallow pond →\nflow-retention str"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 20,
+    "text": "d around structure\n3. How These Features Help Classify It\n● Rigid masonry/RCC + wall height 1–3 m + quick overflow + shallow pond →\nflow-retention structure\n● Channel-constrained narrow geometry 5–20 m → distinguishes from\nbasin-type tanks\n● Low storage + brief ponding → rules out storage/recharge classification\n● Rigid construction = stable identifier separating pakka from loose check dams\n7. Johad\n1. What it is\n● Traditional earthen water harvesting structure in semi-arid India\n● Crescent/semi-circular earthen bund across a slope to capture rainwater\n● Primary purpose: groundwater recharge and community water needs; no\ncontrolled outlet\n2. Key Physical & Geographical Features\n● Area: 500–1"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 21,
+    "text": "ainwater\n● Primary purpose: groundwater recharge and community water needs; no\ncontrolled outlet\n2. Key Physical & Geographical Features\n● Area: 500–10,000 m²; Catchment: 1–10 km²; Depth: 3–6 m (shallow sloping\nbasin)\n● Circularity index: 1.2–1.5; Elongation ratio: 0.3–0.7 (crescent form)\n● Compactness: 0.75–0.85; Construction: earthen (locally sourced)\n● No controlled outlet — natural overflow only; majority of stored water\npercolates\n● Shape: Crescent or semi-circular plan form; open side faces the\nslope/catchment; bund forms the curved closed lower side; circularity index\n1.2–1.5\n● Size: Area 500–10,000 m² (0.05–1 ha); catchment 1–10 km²; small to medium\nscale, clearly visible in 1–2 m re"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 22,
+    "text": "d lower side; circularity index\n1.2–1.5\n● Size: Area 500–10,000 m² (0.05–1 ha); catchment 1–10 km²; small to medium\nscale, clearly visible in 1–2 m resolution imagery\n● Texture: Earthen bund shows rough, uncompacted texture; basin floor\nsilty/sandy; no masonry or concrete elements visible\n● Association: Located on gentle hillslopes in semi-arid villages; associated\nwith community settlements; trees and vegetation typically present on and\naround the bund due to sustained soil moisture\n● Tone: Earthen bund: medium brown; water body when full: dark blue/black;\ndry basin: light tan/beige; green vegetation patch around bund is a consistent\nvisual indicator\n● Color: When full: NDWI >0.3; bund and "
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 23,
+    "text": "k blue/black;\ndry basin: light tan/beige; green vegetation patch around bund is a consistent\nvisual indicator\n● Color: When full: NDWI >0.3; bund and surrounding vegetation: NDVI >0.3;\ncrescent shape clearly distinguishable in FCC imagery\n3. How These Features Help Classify It\n● Crescent shape + earthen permeable bund + no outlet + majority percolates\n→ traditional recharge structure\n● Circularity 1.2–1.5 + elongation 0.3–0.7 → geometric identifier\n● No sluice → rules out irrigation storage classification\n● Shape + earthen construction = stable identifiers regardless of catchment size\n8. Khadin\n1. What it is\n● Traditional runoff farming system from Rajasthan; long earthen bund across a\ngentl"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 24,
+    "text": " identifiers regardless of catchment size\n8. Khadin\n1. What it is\n● Traditional runoff farming system from Rajasthan; long earthen bund across a\ngentle arid slope\n● Spreads monsoon runoff over agricultural land as soil moisture for rabi crops\n● Primary purpose: soil moisture conservation for crop production — no open\npond formed\n2. Key Physical & Geographical Features\n● Area: 1–20 ha; Catchment: 2–20 km²; Depth: 0.5–1 m (shallow moisture\nlayer)\n● Elongation: ~10:1 (length:width); Low circularity: <0.3 equivalent\n● Impervious/semi-impervious base layer; spillway for excess\n● Water stored as soil moisture only — no open water body; sediment\ndeposition improves soil fertility\n● Shape: Highly el"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 25,
+    "text": "e layer; spillway for excess\n● Water stored as soil moisture only — no open water body; sediment\ndeposition improves soil fertility\n● Shape: Highly elongated rectangular/trapezoidal agricultural field bounded by\na long earthen bund at the lower end; L:W ~10:1; open towards the upper\nslope catchment\n● Size: Area 1–20 ha; bund several hundred metres long; large enough to be\ndistinctly visible in moderate-resolution (10–30 m) satellite imagery\n● Texture: Flat, smooth agricultural surface; bund has slightly rougher earthen\ntexture; silty-smooth field floor due to sediment deposition from seasonal\nflooding\n● Association: Arid/semi-arid agricultural landscape of Rajasthan; no open\nwater body prese"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 26,
+    "text": "ld floor due to sediment deposition from seasonal\nflooding\n● Association: Arid/semi-arid agricultural landscape of Rajasthan; no open\nwater body present; upstream catchment is rocky or barren slope; associated\nwith rabi cropping season\n● Tone: Field surface: medium to dark brown (moist soil post-monsoon);\ngradually lighter through the dry season; bund is a slightly darker brown linear\nfeature at field edge\n● Color: Post-monsoon: higher NDVI than surrounding barren land due to\nretained soil moisture; NDWI near 0 (soil moisture, not open water); field\nappears greenish in FCC during rabi season\n3. How These Features Help Classify It\n● No open pond + soil moisture storage + elongated 10:1 + agri"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 27,
+    "text": "field\nappears greenish in FCC during rabi season\n3. How These Features Help Classify It\n● No open pond + soil moisture storage + elongated 10:1 + agricultural land →\nrunoff farming system\n● Impervious base → distinguishes from percolation-focused structures\n● Extreme elongation ~10:1 → rules out compact storage tank\n● High elongation ratio = stable identifier across all khadins\n9. Loose Check Dam\n1. What it is\n● Temporary/semi-permanent structure of loose stones, brushwood, or rubble\nacross a small gully\n● Primary purpose: reduce flow velocity, control erosion — allows partial\ninfiltration through gaps\n● Often placed in series along gullies for cumulative effect\n2. Key Physical & Geographica"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 28,
+    "text": " control erosion — allows partial\ninfiltration through gaps\n● Often placed in series along gullies for cumulative effect\n2. Key Physical & Geographical Features\n● Perimeter: ≤100 m; Height: ≤1.5 m (+0.5 m foundation)\n● Storage: minimal, temporary; Compactness: 0.5–0.7\n● Construction: loose stones/brushwood/rubble (permeable)\n● Infiltration: >12.7 mm/hr through structure; near-vertical upstream face\n● Shape: Very short, narrow irregular linear feature across gully; outline is\njagged/uneven due to loose material; near-invisible in low-resolution imagery\n● Size: Perimeter ≤100 m; extremely small — typically only detectable in\nsub-metre (0.3–0.5 m) imagery or field survey\n● Texture: Rough, irreg"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 29,
+    "text": "imagery\n● Size: Perimeter ≤100 m; extremely small — typically only detectable in\nsub-metre (0.3–0.5 m) imagery or field survey\n● Texture: Rough, irregular rubble/stone texture; no smooth masonry finish;\nvisually blends with surrounding rocky gully terrain\n● Association: Located in small gullies and ravines on degraded/eroded land;\ntypically found in series at regular intervals along same channel; sparse\nvegetation surroundings\n● Tone: Similar tone to surrounding rocky/stony land; small upstream wet patch\nmay appear marginally darker; structure barely distinguishable from the\nchannel bed material\n● Color: NDWI marginally higher (0.05–0.15) in small upstream wet patch;\nstructure itself NDWI <0"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 30,
+    "text": "barely distinguishable from the\nchannel bed material\n● Color: NDWI marginally higher (0.05–0.15) in small upstream wet patch;\nstructure itself NDWI <0; NDVI very low; spectrally matches rocky channel\nbed\n3. How These Features Help Classify It\n● Permeable loose construction + height ≤1.5 m + minimal temporary storage\n→ flow-retarding structure\n● Permeability → distinguishes from rigid pakka check dam\n● Small scale ≤100 m → separates from river-spanning anicuts\n● Permeable rubble + low height = stable identifiers\n10. Percolation Tank\n1. What it is\n● Earthen surface water body built across a natural stream to capture rainwater\nand push it into the ground\n● Primary purpose: large-scale groundwat"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 31,
+    "text": "s\n● Earthen surface water body built across a natural stream to capture rainwater\nand push it into the ground\n● Primary purpose: large-scale groundwater recharge in semi-arid regions\n● Wider and deeper than CCT; operates at tank scale, not trench scale\n2. Key Physical & Geographical Features\n● Depth: 3–6 m (arid: 4–6 m; hilly: <3 m); Bund length: 50–200+ m; Width:\n20–100 m\n● Storage: up to 5 MCM; Infiltration: >12.7 mm/hr\n● Recharge efficiency: 60–75%; Recharge potential: 0.3–0.6 MCM/yr per 100\nha catchment\n● Weir crest: 1–2 m; Embankment slope: 1:1.5 to 1:2; Construction: earthen\nporous\n● Shape: Irregular polygon, roughly oval to elongated; earthen bund clearly\ndelineates the perimeter; lar"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 32,
+    "text": ": 1:1.5 to 1:2; Construction: earthen\nporous\n● Shape: Irregular polygon, roughly oval to elongated; earthen bund clearly\ndelineates the perimeter; larger and more regular in form than a mini\npercolation tank\n● Size: Basin area 5–50 ha; bund length 50–200+ m; storage up to 5 MCM —\nnoticeably larger than mini version\n● Texture: Smooth open water when full; dry basin shows sandy/silty exposed\nbed with visible desiccation cracks; porous earthen bund\n● Association: On natural streams in semi-arid areas; no irrigation command\narea downstream; groundwater wells/borewells nearby may reflect recharge\nbenefit; scrubland or open land surrounds\n● Tone: When full: very dark (deep water, high absorption);"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 33,
+    "text": "ater wells/borewells nearby may reflect recharge\nbenefit; scrubland or open land surrounds\n● Tone: When full: very dark (deep water, high absorption); partially full:\nmedium blue; dry: pale tan with possible white salt efflorescence\n● Color: Full: NDWI >0.4, strong water signal; dry: NDWI <0; surrounding\nvegetation may show NDVI benefit from groundwater recharge — a subtle\ngreenish halo effect around the tank\n3. How These Features Help Classify It\n● Infiltration >12.7 mm/hr + recharge efficiency 60–75% + earthen porous →\ngroundwater recharge structure\n● Storage up to 5 MCM vs. mini version (0.1–0.5 MCM) → scale differentiator\n● High recharge + controlled overflow → distinguishes from irrigat"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 34,
+    "text": "ructure\n● Storage up to 5 MCM vs. mini version (0.1–0.5 MCM) → scale differentiator\n● High recharge + controlled overflow → distinguishes from irrigation tanks\n● Minimum infiltration >12.7 mm/hr = always-required stable identifier\n11. Staggered Trench\n1. What it is\n● Short, discontinuous trenches dug in a staggered pattern along slope\ncontours\n● Primary purpose: intercept sheet runoff, reduce erosion, promote in-situ\nmoisture conservation\n● Not continuous — designed to allow excess water to escape between\nsegments\n2. Key Physical & Geographical Features\n● Depth: 0.3–0.75 m; Width: 0.45–0.75 m (bottom, trapezoidal); Length/trench:\n2–2.5 m\n● Volume/trench: 0.20–0.80 m³; Density: 185–420 trench"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 35,
+    "text": " Features\n● Depth: 0.3–0.75 m; Width: 0.45–0.75 m (bottom, trapezoidal); Length/trench:\n2–2.5 m\n● Volume/trench: 0.20–0.80 m³; Density: 185–420 trenches/ha\n● Total volume/ha: 56–200 m³; Bund height: 0.3–0.5 m\n● Vertical interval: 1.5–3 m; Horizontal spacing: 6–13.5 m\n● Infiltration: >12.7 mm/hr; Runoff captured: 20–40%; Erosion reduction:\n50–70%\n● Shape: Short, discontinuous rectangular pits arranged in a staggered\ncheckerboard pattern across the slope; each unit 2–2.5 m long; offset\nbetween adjacent rows\n● Size: Each trench 2–2.5 m × 0.6–0.75 m; high density 185–420/ha; individual\nunits tiny but collectively cover a large hillslope area\n● Texture: Dotted/pitted surface texture visible in ve"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 36,
+    "text": "m; high density 185–420/ha; individual\nunits tiny but collectively cover a large hillslope area\n● Texture: Dotted/pitted surface texture visible in very high-resolution imagery;\nregular patterned micro-relief across the treated slope\n● Association: Steep hillslopes (10–50% gradient); degraded forest or\nscrubland; associated with watershed development works; often accompanies\ngrass seeding or plantation activities\n● Tone: Individual trenches appear as small dark dots or dashes (shadow effect\nfrom depth); bunds slightly lighter; overall slope appears mottled compared to\nuntreated areas\n● Color: Treated slopes show slightly higher NDVI vs. untreated hillslopes;\nindividual trenches: marginally h"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 37,
+    "text": "ears mottled compared to\nuntreated areas\n● Color: Treated slopes show slightly higher NDVI vs. untreated hillslopes;\nindividual trenches: marginally higher NDWI when moist; checkerboard\npattern distinguishable in sub-metre imagery\n3. How These Features Help Classify It\n● Short segments 2–2.5 m + staggered layout + high density 185–420/ha +\nslope 10–50% → slope stabilization\n● Shorter + shallower (0.3–0.75 m) than deep CCT (1–2 m) → shallow slope\nvariant\n● Non-continuous design (20–40% escape) → prevents landslides vs.\ncontinuous trenches\n● Cross-section l:w:d ~2.5:0.75:0.6 m = stable identifier\n12. Sunken Gully Pit\n1. What it is\n● In-stream pit excavated upstream of gullies/drainage plugs to"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 38,
+    "text": "s-section l:w:d ~2.5:0.75:0.6 m = stable identifier\n12. Sunken Gully Pit\n1. What it is\n● In-stream pit excavated upstream of gullies/drainage plugs to trap silt and\nenhance recharge\n● Always sunken below bed level; paired with boulder/earthen plugs for headcut\ncontrol\n● Primary purpose: silt trapping + localized groundwater recharge\n2. Key Physical & Geographical Features\n● Depth: 1–2 m (bed to toe); Width: 1–2 m (gully width-fit); Length: 2–5 m\n● Volume: 5–50 m³; Silt trap depth: 0.5–1 m; Upstream plug height: 1–2 m\n● Infiltration: >12.7 mm/hr; Recharge: 10–20% of inflow\n● Slope <5% → deeper (2 m), earthen; Slope >5% → shallower (1 m),\ngabion-faced\n● Shape: Small rectangular/square depressi"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 39,
+    "text": "; Recharge: 10–20% of inflow\n● Slope <5% → deeper (2 m), earthen; Slope >5% → shallower (1 m),\ngabion-faced\n● Shape: Small rectangular/square depression within gully channel; very\ncompact form; plug structure visible as a raised element immediately\nupstream\n● Size: Tiny — 2–5 m long, 1–2 m wide; volume 5–50 m³; detectable only in\nsub-metre (<0.5 m) imagery or field survey\n● Texture: Smooth silt-covered pit floor; rougher gabion/boulder plug walls;\nsurrounding gully has eroded, undercut banks\n● Association: Within active gully systems on severely eroded terrain; always\npaired with an upstream plug structure; downstream of plug typically dry;\nassociated with ravine/badland landscapes\n● Tone: P"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 40,
+    "text": "y eroded terrain; always\npaired with an upstream plug structure; downstream of plug typically dry;\nassociated with ravine/badland landscapes\n● Tone: Pit floor: dark (moist silt); plug: medium grey (gabion/boulder);\nsurrounding gully banks: pale, eroded, lighter-toned exposed subsoil\n● Color: Pit: NDWI 0.1–0.25 when moist; plug structure: NDWI <0; gully\nchannel: low NDVI; silt deposit may show slightly different spectral tone from\nsurrounding eroded soil\n3. How These Features Help Classify It\n● In-stream location + silt trap function + small volume 5–50 m³ + paired with\nplugs → channel pit structure\n● Gully-constrained width 1–2 m → distinguishes from broader percolation\ntanks\n● Headcut contr"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 41,
+    "text": "ume 5–50 m³ + paired with\nplugs → channel pit structure\n● Gully-constrained width 1–2 m → distinguishes from broader percolation\ntanks\n● Headcut control → distinguishes from slope-based staggered trenches\n● Minimum depth 1 m for trap function = stable identifier\n13. Earthen Check Dam\n1. What it is\n● Manmade low earthen wall across a stream to slow water flow and recharge\ngroundwater\n● Primary purpose: slow runoff + groundwater recharge; temporary,\nnon-permanent, seasonal\n● Found in scrubland and eroded land in moderately sloping terrain\n2. Key Physical & Geographical Features\n● Area: 100–2000 m²; Perimeter: 50–300 m; Depth: 1–5 m (from DEM)\n● L:W ratio: >10:1 (long and skinny); Compactness: "
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 42,
+    "text": "Physical & Geographical Features\n● Area: 100–2000 m²; Perimeter: 50–300 m; Depth: 1–5 m (from DEM)\n● L:W ratio: >10:1 (long and skinny); Compactness: >15 (high)\n● Surrounding slope: 5–15% (moderately sloping)\n● NDWI: >0.4 when wet; Non-permanent water zones; runoff-based temporary\nstorage\n● Surroundings: sparse vegetation / scrubland / eroded land\n● Shape: Very elongated linear water body (L:W >10:1); narrow strip following\nstream channel; low earthen bund visible as a slight linear rise across the\nchannel\n● Size: Area 100–2000 m²; perimeter 50–300 m; medium-small, visible in 1–3\nm resolution imagery only when water-filled\n● Texture: Smooth water surface when full; exposed earthen bund has r"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 43,
+    "text": "–300 m; medium-small, visible in 1–3\nm resolution imagery only when water-filled\n● Texture: Smooth water surface when full; exposed earthen bund has rough,\nloose-soil texture; seasonal silt deposits visible on basin floor after drying\n● Association: Scrubland, eroded, or degraded land; along seasonal streams;\nupstream shows bare/eroded catchment; no agricultural command area\ndownstream\n● Tone: When full: dark blue/black elongated strip; when dry: pale buff/tan\nearthen bund barely distinguishable from surrounding land; largely invisible in\ndry season\n● Color: Wet season: NDWI >0.4 in elongated narrow band; dry season: NDWI\n<0, structure undetectable; surrounding land NDVI very low (sparse scr"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 44,
+    "text": "eason\n● Color: Wet season: NDWI >0.4 in elongated narrow band; dry season: NDWI\n<0, structure undetectable; surrounding land NDVI very low (sparse scrub)\n3. How These Features Help Classify It\n● L:W >10:1 + compactness >15 + shallow 1–5 m + slope 5–15% → earthen\ncheck dam\n● NDWI >0.4 only when wet → confirms non-permanent seasonal water body\n● Scrubland/eroded land context → distinguishes from farm ponds (flat\ncropland)\n● Becomes undetectable when dry — geometric cues essential for dry-season\nidentification\nEarthen check dam across kudumbur river in kerala , india.\n14. Farm Pond\n1. What it is\n● Manmade dug-out depression in flat farmland to store rainwater for crop\nirrigation\n● Primary purpo"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 45,
+    "text": "er in kerala , india.\n14. Farm Pond\n1. What it is\n● Manmade dug-out depression in flat farmland to store rainwater for crop\nirrigation\n● Primary purpose: rainwater storage for irrigation; round/oval shape\n● Rain-dependent filling — shrinks in dry periods; located in or adjacent to crop\nfields\n2. Key Physical & Geographical Features\n● Area: 250–10,000 m² (0.025–1 ha); Perimeter: 20–150 m; Depth: 2–4 m\n● Compactness: 1–2 (round/oval); Slope: <5% (flat land)\n● Surrounding land: crop fields; NDWI: 0.2–0.4; non-permanent, seasonal filling\n● Shape: Compact, near-circular or oval depression; compactness 1–2; clearly\nexcavated form with defined edges; no natural stream channel connection\nrequired\n● "
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 46,
+    "text": "ompact, near-circular or oval depression; compactness 1–2; clearly\nexcavated form with defined edges; no natural stream channel connection\nrequired\n● Size: Area 250–10,000 m²; perimeter 20–150 m; small isolated water body\nwithin an agricultural setting\n● Texture: Smooth water surface; excavated banks form a slight berm around\nthe pond; dry pond floor shows bare earth or cracked mud; earthen\nembankment around perimeter\n● Association: Surrounded entirely by crop fields on flat agricultural land;\ntypically one per farm holding; may have a small inlet channel from adjacent\nfield drainage\n● Tone: Water: dark blue/black when full; pale brown circular patch when dry;\nsurrounding crop fields appear "
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 47,
+    "text": "let channel from adjacent\nfield drainage\n● Tone: Water: dark blue/black when full; pale brown circular patch when dry;\nsurrounding crop fields appear bright green (irrigated season) or yellow/brown\n(post-harvest)\n● Color: Full: NDWI 0.2–0.4; surrounding fields: NDVI >0.4 (irrigated crops);\ndry: near-circular low-NDWI patch; circular shape combined with crop field\ncontext together confirm farm pond identity\n3. How These Features Help Classify It\n● Round/oval shape (compactness 1–2) + flat cropland context <5% + NDWI\n0.2–0.4 → farm pond\n● Low compactness (near circular) → distinguishes from elongated earthen\ncheck dams (compactness >15)\n● Flat terrain <5% → rules out slope-based structures (CC"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 48,
+    "text": "pactness (near circular) → distinguishes from elongated earthen\ncheck dams (compactness >15)\n● Flat terrain <5% → rules out slope-based structures (CCT, staggered trench)\n● Crop field surroundings confirm irrigation purpose; becomes undetectable\nwhen dry\n15. Field Outlet\n1. What it is\n● Narrow channel or pipe delivering irrigation water from a main canal to farm\nfields\n● Primary purpose: canal water conveyance — not a storage body\n● Permanent, consistent water flow year-round (canal-fed)\n2. Key Physical & Geographical Features\n● Area: <500 m² (often <100 m²); Perimeter: 10–50 m; Width: <5 m\n● Elongation ratio: >20:1 (super thin/narrow); Depth: minimal\n● Slope: flat irrigated plains; NDWI: <0"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 49,
+    "text": "often <100 m²); Perimeter: 10–50 m; Width: <5 m\n● Elongation ratio: >20:1 (super thin/narrow); Depth: minimal\n● Slope: flat irrigated plains; NDWI: <0.1; Permanent flow (canal-fed,\nyear-round)\n● Location: adjacent to canal networks in irrigated plains\n● Shape: Very thin, straight linear channel or pipe; extreme elongation >20:1;\nbranches off from main canal into field; no water body, purely a conveyance\nline\n● Size: Area <500 m² (often <100 m²); width <5 m; barely resolvable except in\nsub-metre imagery; length varies with field position relative to canal\n● Texture: Smooth channel lining (concrete/brick) or narrow earthen kutcha\nchannel; uniform narrow cross-section; minimal surface expressio"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 50,
+    "text": "e to canal\n● Texture: Smooth channel lining (concrete/brick) or narrow earthen kutcha\nchannel; uniform narrow cross-section; minimal surface expression in imagery\n● Association: Always adjacent to and branching off a main irrigation canal; flat\nirrigated agricultural plains; irrigated fields on both sides; regular spacing of\noutlets along the canal is a key pattern indicator\n● Tone: When flowing: thin dark line (water); concrete-lined outlets: medium\ngrey; often too narrow to resolve tonally in standard imagery — identified\nprimarily by spatial position and linear pattern\n● Color: NDWI <0.1 (too narrow for strong open-water signal); surrounding\nfields: high NDVI (irrigated); appears as a thi"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 51,
+    "text": " position and linear pattern\n● Color: NDWI <0.1 (too narrow for strong open-water signal); surrounding\nfields: high NDVI (irrigated); appears as a thin dark linear feature in true\ncolour or FCC imagery branching from canal\n3. How These Features Help Classify It\n● Elongation >20:1 + tiny area <500 m² + NDWI <0.1 + permanent flow →\ncanal-fed field outlet\n● NDWI <0.1 → distinguishes from all open water bodies (tanks, ponds)\n● Permanent year-round flow → distinguishes from seasonal earthen check\ndams / farm ponds\n● Width <5 m + elongation >20:1 + flat canal-adjacent = stable identifiers\nProperty Anicut CCT Deep CCT\nArea 0.01-1 ha 0.001-0.1 ha 0.001-0.1 ha\n(impoundment)\nPerimeter 100-2000 m 20-10"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 52,
+    "text": "lat canal-adjacent = stable identifiers\nProperty Anicut CCT Deep CCT\nArea 0.01-1 ha 0.001-0.1 ha 0.001-0.1 ha\n(impoundment)\nPerimeter 100-2000 m 20-100 20-100 m/segment\n(river-spanning) m/segment\nDepth 0.5-3 m (upstream) 0.5-1 m 1-2 m\nShape (Compactness: 5-10 (linear/curved) 8-15 8-20 (deeper trench)\n1=compact, >1=narrow) (trench-like)\nSlope 0-2% (riverbed) 2-8% 2-10% (steeper contour)\n(contour)\nLength/Width (Narrowness >5 (elongated >8 (along >10 (longer/deeper)\nRatio) across river) contour)\nReference Links:\nAnicut: https://www.gktoday.in/grand-anicut-kallanai/ ;\nhttps://graconllc.com/grand-anicut-design/\nCCT:\nhttps://www.cllmp.com/wp-content/uploads/2020/06/Structures-for-commons-CCT-S\nCT-"
+  },
+  {
+    "doc_id": "92c05e8b-ea31-4807-ad35-e7ff12c41b12",
+    "chunk_index": 53,
+    "text": "d-anicut-kallanai/ ;\nhttps://graconllc.com/grand-anicut-design/\nCCT:\nhttps://www.cllmp.com/wp-content/uploads/2020/06/Structures-for-commons-CCT-S\nCT-etc..pdf\nDeep CCT: https://www.agrigoals.in/2025/04/deep-continuous-contour-trenches.html"
+  }
+]

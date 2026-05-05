@@ -1,0 +1,172 @@
+Participant Rulebook
+Introduction:
+- A month-long program starting in December for students to start their journey in the
+world of open source, the ONLY requirement being an enthusiastic heart to learn.
+- Explore and find out your interests by contributing to projects from different fields: App,
+Web, Design, Blockchain, Cybersecurity, and more!
+- Countless projects designed and created from these fields that will be hosted on
+GitHub for you to contribute to! Gain points, climb the leaderboard, and win exciting
+rewards!
+Pre-requirements
+- Basic knowledge of Git/GitHub will help you contribute to the projects
+easily, and,
+- Nothing more! You will have to learn-and-apply as you progress through this month
+filled with events! Ofcourse, knowledge of certain tech-stacks will give you an advantage,
+but we recommend you to explore as much as you can!
+- In addition to registration on Unstop, make sure you have registered at
+https://events.geekhaven.in/ for the leaderboard tracking. If you haven't
+registered then points can not be awarded.
+How does OpenCode work?
+The steps are very similar to contributing in any typical open-source
+project. This will ensure that OpenCode can be an opening door for you to
+contribute to bigger projects out there, and help you participate in events
+such as GSoC.
+Through OpenCode, you will not just gain experience working with new
+technologies and open-source projects, but you will also get the chance to expand
+your network by connecting with others who are more experienced in the
+field.
+There will be a number of projects (or repositories) hosted on the OpenCode
+‘25 Organization in GitHub upon the commencement of the event. Each
+project will have a number of issues rolling out with a certain frequency for
+the entirety of the month. Each project will have 1-2 mentors assigned to
+them, who will be responsible for handling those projects, and attending to
+the queries/PRs of the participants in their projects.
+The entire event is based on a leaderboard system, where participants gain
+different amount of points based on the difficulty of the issue that they
+complete.
+These points will be predetermined and announced in advance to maximize
+transparency. It will also be ensured that no one project has a lot more
+tasks than the other projects; i.e., the points distribution between projects
+will be kept uniform as best as possible.
+There is no restriction to how many projects you can contribute to in the event.
+You are free to explore all the projects, and contribute to all of them, the only
+restriction being that you cannot have 3 first-come issues assigned to you
+at any time across all repos in OpenCode ‘25 Organization (and only one
+first-come issue per repo at a moment).
+Rules:
+1) Read a project:
+There will be a tonne of projects hosted on GitHub. Open a project, read
+through its README file, and understand what the project is about. If it
+excites you, do not hold back from contributing to it!
+2) Claim an Issue:
+Each project will have multiple issues, or tasks, that you can choose to solve. The point is,
+you don’t need to necessarily know how to complete the issue
+beforehand! This will be your opening door to learn something new.
+There will mainly be 3 kinds of issues:
+a) Open-for-all issues (OFA): issues that do not require to be claimed. They
+may have flexible time-frames. These issues can be solved by everyone,
+and do not require to be claimed by anyone.
+b) Competitive issues: These are the issues that can be tried by everyone
+(without without requiring to be claimed), but only the best PR in terms of
+quality and code will receive points. Selecting the best PR is up to the
+mentor.
+c) First-come issues: These are the issues that would be assigned to the person
+who claims them first. You can only be assigned to 3 such issues at any
+moment, across all repositories of the event (one issue per repo at any given
+moment),
+which means you can work on 3 repos at any moment, with one such issue
+on each repo.
+You will be given a time of 2 days to work on them, and an additional of
+maximum 12 hours if the mentor allows it. Violating any of the rules or
+spamming may result in points deduction or a ban from the Event.
+If you’re not able to complete the issue within the given time-frame, you will
+not be allowed to work on the same issue again. The next user to claim the
+issue
+once the issue is up-for-grabs will be assigned the issue, and the timer will
+reset. This is irrespective of who was second to claim the issue originally.
+- Arguing or misbehaving with the mentor relating to these tasks or issues
+will penalize you.
+- NOTE: the amount of points for each issue will vary depending on the
+difficulty of the issue, and this will be decided and informed to you by the
+mentor of that repository. Generally, OFA issues will have lesser points than
+the Competitive or First-come issues, but this can vary.
+3) Complete the issue:
+After claiming the issue, now it’s time to explore ways on how to proceed with completing
+the issue. Research ways to complete the issue, test them, and check to see which suits
+the best! Make sure to read the issue well and solve all that the issue demands. If
+something is not clear about the issue, get it clarified with the mentor of that repo
+(repository) but do remember that the mentor is meant to guide you, not help you. They
+can provide you with helpful resources should you require them.
+4) CONTRIBUTING.md:
+Each project may have a CONTRIBUTING.md file, that will enlist the necessary steps you
+must take to contribute to that project/repo. If a PR (Pull Request) does not follow these
+steps, it will not be accepted and you will not gain points. In case a project does not
+contain a CONTRIBUTING.md file or similar, ensure that you get it clarified with the
+mentors of that project.
+5) Open a Pull Request (PR):
+Once you’re confident with the changes you’ve made or the implementation that you’ve
+done, it’s time to request for these changes to be incorporated into the project. Following
+the template mentioned for that project, head over to GitHub and open a PR. Once done,
+it’s time to wait until your changes are reviewed by a mentor.
+It’s important to follow a few rules while opening the PR. Not following these
+rules may result in your PR not being reviewed/accepted.
+- It is a must to fork the repo to your account first. Once done, complete the task in your
+fork (this step varies from repo-to-repo. Some may require you to create a new branch in
+the fork). Having done this, you are set to make a PR to the project that you’re
+contributing to. Make sure there are no merge conflicts.
+- The PR title should be meaningful and relevant to the issue that it’s solving.
+- All the PRs MUST have “Issue: #<issue_number>” (the # is not a typo. It is part of the
+template) in the first line of the PR description. Not doing so WILL NOT update your
+points in the leaderboard, even if it is accepted by the mentor. See the image below to
+see what a “valid” PR looks like:
+- If your PR is valid, you will get a message from our GitHub bot, saying that you’ve
+followed the template. If you raise an invalid PR (not following the template), the bot will
+warn you for the
+same, and you will have to modify your PR accordingly. Contact a mentor ONLY
+IF REQUIRED. The following images show what messages you may get:
+1) Valid PR:
+2) PR Merged:
+3) Invalid PR:
+- It is required for you to work on the same PR if any changes are suggested (i.e., modify
+the invalid template to make it valid, or any other changes). You should not close the PR
+and create a new one, unless the mentor asks for it. Any further changes in that PR must
+be done within that PR.
+The mentor may suggest changes to be made and once satisfied, will accept your PR to be
+merged into the project, helping you gain valuable points.
+FAQs:
+1) What if I get some query regarding the issue I’m assigned to? Where
+can I seek help from the mentor?
+- You can either message the mentor on the thread of that issue, or more
+preferably, ping any of the mentors in the Discord channel corresponding to
+that project. It is a must for all the participants to join the Discord Server
+of OpenCode
+- The mentor may also link resources that may help you solve a particular
+issue. These resources will be accessible only through the discord server,
+to ensure transparency to other participants, and accessibility to those
+resources by others as well.
+2) How do I know when an issue is opened? What are the chances of
+me being assigned an issue, as others may claim it before me?
+- You can “watch” the repository that you’re interested in, so that you get
+notifications by mail when some new activity happens in that repository.
+You also receive updates in the Discord server when a new issue is
+opened in a repository. You will have to stay on the watch for new
+issues.
+- There will also be open-for-all issues that can be contributed to by
+everyone, in case you are not able to find time to claim an issue.
+3) I feel that someone is cheating/misusing the rules to gain points, or
+someone is purposely claiming issues without solving them. What should I
+do?
+- Your first point of contact for any problems would be the mentor of that
+repository if it is related to some project. We will make sure that every
+participant has a fair participation in OpenCode. Any miscreants found will
+strictly be penalized,
+and may even be restricted from participating in further OpenCode events.
+You can also ping any mentor in the Discord server if the specific mentor of that
+repository is NA.
+- Do not take the matter in your own hands. It is our responsibility to look into
+it. Be sure to be ethical at all times, to avoid getting penalized yourself.
+What next?
+Well, that’s what you’re gonna have to do for the entire month! Scout for projects,
+claim issues, solve them, and climb the leaderboard. These contributions will help
+you step into the real world of open-source out there by prepping you with some
+fancy tech- stacks, and more importantly, ethics and practices to be followed.
+Check out the GitHub page of OpenCode to view past projects, and learn more about it! Do
+follow GeekHaven on your socials to stay updated with the event. See you there!
+Join the Discord server of OpenCode!
+GitHub (OpenCode)
+Instagram
+(GeekHaven) LinkedIn
+(GeekHaven) X
+(GeekHaven)
+Facebook (GeekHaven)
+GeekHaven's Website

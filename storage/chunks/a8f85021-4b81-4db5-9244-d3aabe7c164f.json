@@ -1,0 +1,172 @@
+[
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 0,
+    "text": "FPGA Implementation and Comparative Analysis of\n16-bit High Performance Adders\nLiza Kasam Devale Anannya Shishir\nDepartment of Computer Science and Engineering Department of Computer Science and Engineering\nIndian Institute of Information Technology Vadodara Indian Institute of Information Technology Vadodara\nGujarat, India Gujarat, India\n202451095 202451049\nMahajan Yukta Ameet Modi Tanvi Manohar\nDepartment of Computer Science and Engineering Department of Computer Science and Engineering\nIndian Institute of Information Technology Vadodara Indian Institute of Information Technology Vadodara\nGujarat, India Gujarat, India\n202451097 202451108\nAbstract—Adders are fundamental components in digita"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 1,
+    "text": "an Institute of Information Technology Vadodara\nGujarat, India Gujarat, India\n202451097 202451108\nAbstract—Adders are fundamental components in digital sys- carry signals. This makes it much faster, but it also makes the\ntems and significantly influence the performance of processors hardware more complicated.\nand arithmetic units. This paper presents the design, FPGA\nIn FPGA-based systems, the performance of these archi-\nimplementation, and comparative analysis of multiple 16-bit\ntectures is affected by hardware-specific improvements, like\nadderarchitectures,includingRippleCarryAdder(RCA),Carry\nLookahead-style Adder (CLA), Kogge-Stone Adder (KSA), and dedicated carry chains. Modern synthesis"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 2,
+    "text": "rarchitectures,includingRippleCarryAdder(RCA),Carry\nLookahead-style Adder (CLA), Kogge-Stone Adder (KSA), and dedicated carry chains. Modern synthesis tools can directly\nan FPGA-optimized behavioral adder. map high-level arithmetic descriptions onto these optimized\nThe designs are implemented using Verilog HDL and synthe- structures, which often makes them work better.\nsized on the Nexys A7 FPGA using Vivado. A unified testbench This project implements and compares several 16-bit adder\nis used to verify functional correctness under identical input\narchitectures, such as RCA, CLA-style, KSA, and an FPGA-\nconditions, and performance is evaluated based on propagation\noptimizedbehavioraladder.It"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 3,
+    "text": "put\narchitectures, such as RCA, CLA-style, KSA, and an FPGA-\nconditions, and performance is evaluated based on propagation\noptimizedbehavioraladder.Itdoesthistolookatthetrade-offs\ndelay and resource utilization.\nResultsshowthattheKogge-StoneAdderachieveslowerdelay between delay and hardware use on FPGA platforms.\ndue to parallel computation, while the FPGA-optimized behav-\nioral adder often provides comparable or better performance\nII. SYSTEMARCHITECTURES\nby utilizing dedicated carry-chain hardware. This highlights the\nimportance of considering FPGA-specific optimizations in high-\nRTL Elaborated\nperformance digital design. Design Block Simulation\nDesign\nIndexTerms—FPGA,RippleCarryAdder,Carry"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 4,
+    "text": " FPGA-specific optimizations in high-\nRTL Elaborated\nperformance digital design. Design Block Simulation\nDesign\nIndexTerms—FPGA,RippleCarryAdder,CarryLookAhead\nAdder, Kogge-Stone Adder, Parallel Prefix Adder, High Perfor-\nmance, Vivado\nFPGA Board\nSynthesis Report Pin Assignment\nImplementation\nI. INTRODUCTION\nArithmetic operations are the building blocks of digital Timing Report\ntechnology.Forexample,additionisoneofthemostcommon\ntasksdonebyprocessors,ArithmeticLogicUnits(ALUs),and Fig.1. Blockdiagramoftheproposedexperimentalsetup\ndigital signal processing applications. As the performance of\na system gets better, the efficiency of adder circuits becomes A. Ripple Carry Adder (RCA)\na very impor"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 5,
+    "text": "processing applications. As the performance of\na system gets better, the efficiency of adder circuits becomes A. Ripple Carry Adder (RCA)\na very important factor that affects speed and latency.\nThe Ripple Carry Adder links full adders together, with\nA lot of people use the Ripple Carry Adder (RCA) because each stage passing its carry to the next. The carry moves\nit’s easy to understand and cheap to make. The carry prop- through all stages of a 16-bit adder, which causes a delay that\nagates sequentially from the least significant bit to the most is proportional to the number of bits. So, RCA has an O(N)\nsignificant bit, which causes linear delay. This makes it less delay and takes up very lit"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 6,
+    "text": " is proportional to the number of bits. So, RCA has an O(N)\nsignificant bit, which causes linear delay. This makes it less delay and takes up very little space, which makes it good for\nuseful for high-performance applications. simple designs that don’t need much space.\nTo get around this problem, new architectures like Carry\nB. Carry Lookahead-style Adder (CLA)\nLookahead Adders (CLA) and Parallel Prefix Adders have\nbeen made. The Kogge-Stone Adder (KSA) is a well-known The CLA-style adder uses signals called ”generate” and\nparallel prefix adder that uses a tree-like structure to calculate ”propagate” to figure out how to carry. But in this version,\nthe carry still moves in a straight line. S"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 7,
+    "text": " that uses a tree-like structure to calculate ”propagate” to figure out how to carry. But in this version,\nthe carry still moves in a straight line. So, the delay is still C. Kogge-Stone Adder (KSA)\nclose to O(N), but the structure is a little better than RCA.\nThe Kogge-Stone Adder is a parallel prefix adder that\nC. Kogge-Stone Adder (KSA) computes carry signals using a tree-like structure. It operates\nin multiple stages, where each stage combines generate and\nThe Kogge-Stone Adder is a parallel prefix adder that\npropagate signals over increasing distances.\ncalculates carry signals in a tree-like way over several stages.\nThis cuts down on delay to O(log2 N), which makes it a\nG =G +(P ·G ) (4"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 8,
+    "text": "ng distances.\ncalculates carry signals in a tree-like way over several stages.\nThis cuts down on delay to O(log2 N), which makes it a\nG =G +(P ·G ) (4)\nhigh-performancedesign,butitalsomakesthehardwaremore i:j i i j\ncomplicated.\nP =P ·P (5)\nD. FPGA-Optimized Behavioral Adder i:j i j\nThe behavioral adder uses a high-level arithmetic descrip- By computing carries in parallel across log (n) stages, the\ntion, which lets FPGA tools map it onto hardware that is Kogge-Stone Adder significantly reduces propagation delay\nspecifically designed for carry chains. This leads to better compared to RCA.\nperformance with a simple design.\nD. FPGA-Optimized Behavioral Adder\nE. Architecture Comparison\nThe behav"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 9,
+    "text": "hains. This leads to better compared to RCA.\nperformance with a simple design.\nD. FPGA-Optimized Behavioral Adder\nE. Architecture Comparison\nThe behavioral adder is described using a high-level arith-\nmetic expression:\nTABLEI\nARCHITECTURETRADE-OFFSUMMARY {Cout,Sum}=A+B+Cin (6)\nArchitecture Delay Area Complexity\nDuringsynthesis,FPGAtoolsmapthisexpressionontoded-\nRCA O(N) Low Low\nCLA-style O(N) Moderate Moderate icatedcarry-chainhardware.Theseoptimizedpathsenablefast\nKogge-Stone O(log N) High High carry propagation, often resulting in performance comparable\nBehavioral Optimized Low Low\nto or better than manually designed architectures.\nE. Performance Considerations\nIII. THEORY\nThe performance "
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 10,
+    "text": " comparable\nBehavioral Optimized Low Low\nto or better than manually designed architectures.\nE. Performance Considerations\nIII. THEORY\nThe performance of an adder is influenced by:\nAdder circuits form the fundamental building blocks of\ndigital arithmetic systems. The efficiency of an adder is pri- • Propagation Delay: Time required for carry signals to\nreach the most significant bit.\nmarily determined by how quickly it computes carry signals.\nDifferent adder architectures optimize this carry computation • Hardware Utilization: Number of logic elements\n(LUTs) used.\nin different ways, leading to variations in performance and\nhardware utilization. • FPGAOptimization:Useofdedicatedcarry-chainstru"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 11,
+    "text": "ements\n(LUTs) used.\nin different ways, leading to variations in performance and\nhardware utilization. • FPGAOptimization:Useofdedicatedcarry-chainstruc-\ntures.\nA. Ripple Carry Adder (RCA)\nThus, while theoretical designs favor parallel architectures\nThe Ripple Carry Adder is the simplest adder architecture, likeKSA,practicalFPGAimplementationsdependheavilyon\nconstructed by cascading full adders. Each stage generates a synthesis optimizations.\nsum and a carry based on its inputs and the carry from the\nprevious stage.\nIV. METHODOLOGY\nA. Design Implementation\nC i+1 =(A i ·B i )+(A i ·C i )+(B i ·C i ) (1) We built this system in Verilog HDL and includes four\nvaried 16 bit adder architectures: Ri"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 12,
+    "text": "lementation\nC i+1 =(A i ·B i )+(A i ·C i )+(B i ·C i ) (1) We built this system in Verilog HDL and includes four\nvaried 16 bit adder architectures: Ripple Carry Adder (RCA),\nDuetothissequentialdependency,thecarrymustpropagate\nCarry Lookahead-style Adder (CLA), Kogge-Stone Adder\nthrough all stages, resulting in a linear delay proportional to\n(KSA), and an FPGA optimized behaviorial adder.\nthe number of bits.\nThe structural models for RCA and CLA-style adders were\nB. Carry Lookahead-style Adder (CLA) synthesizedwheretheexplicitequationsforsumsandcarryare\nThe CLA-style adder improves carry computation by intro- declared.ForKogge-StoneAdderthemultistageprefixcompu-\nducing generate and propagate "
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 13,
+    "text": "carryare\nThe CLA-style adder improves carry computation by intro- declared.ForKogge-StoneAdderthemultistageprefixcompu-\nducing generate and propagate signals: tation was done using generate and propagate signals through\nmulti levels of calculation for parallel carry computation. The\nG =A ·B , P =A ⊕B (2) behavioral adder was synthesized using high level equation.\ni i i i i i\nThesynthesistoolscandoautomaticdesignoptimizationwhen\nthe model is described in high-level terms.\nC =G +(P ·C ) (3)\ni+1 i i i A single top module was developed for testing all of these\nThis representation organizes carry logic more efficiently. adder architectures. It uses FPGA switches for the input\nHowever, in this imp"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 14,
+    "text": "all of these\nThis representation organizes carry logic more efficiently. adder architectures. It uses FPGA switches for the input\nHowever, in this implementation, the carry still propagates operandsandswitchesusedforloadingandstoringoftheinput\nsequentially, making it structurally improved but not fully value in to registers. The result is observed through onboard\nparallel. LEDs.\nB. Verification 1 module kogge_stone_16(\n2 input [15:0] A, B,\nWe created a single testbench that checks all four imple- 3 input Cin,\n4 output [15:0] Sum,\nmented adder architectures. Inputs are a combination of pre- 5 output Cout\ndefined values and randomly generated test cases to ensure 6 );\ncorrect functionality. Fo"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 15,
+    "text": "rchitectures. Inputs are a combination of pre- 5 output Cout\ndefined values and randomly generated test cases to ensure 6 );\ncorrect functionality. For each test case the output is derived 8 wire [15:0] G, P;\nusing a reference expression and the results for each imple- 9 wire [15:0] G1,P1,G2,P2,G3,P3,G4,P4;\n10 wire [16:0] C;\nmentationiscomparedagainstthereference.Discrepanciesare\nflagged during simulation. 12 assign G = A & B;\n13 assign P = A ˆ B;\nV. IMPLEMENTATIONANDINTEGRATION 15 // Stage 1 (distance 1)\n16 genvar i;\n17 generate\nA. Adder Module Implementation 18 for(i=0;i<16;i=i+1) begin\n19 if(i==0) begin\nTo allow easy comparison of different implementations 20 assign G1[i]=G[i];\nall design"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 16,
+    "text": "e Implementation 18 for(i=0;i<16;i=i+1) begin\n19 if(i==0) begin\nTo allow easy comparison of different implementations 20 assign G1[i]=G[i];\nall designs were coded separately as Verilog modules. The 21 assign P1[i]=P[i];\n22 end else begin\nRCA design uses bit-wise full-adders sequentially. The CLA 23 assign G1[i]=G[i] | (P[i] & G[i-1]);\nstyleadder uses propagate and generate signals to structure 24 assign P1[i]=P[i] & P[i-1];\n25 end\nparallelcarrygenerationmoreorderly.Kogge-Stoneadderuses 26 end\nan n stage prefix structure where carries are generated in 27 endgenerate\nparallelusingmultiplelevelsofcarrygenerationstages.Carry 29 // Stage 2 (distance 2)\ngeneration in the Kogge-StoneAdder is achiev"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 17,
+    "text": "ted in 27 endgenerate\nparallelusingmultiplelevelsofcarrygenerationstages.Carry 29 // Stage 2 (distance 2)\ngeneration in the Kogge-StoneAdder is achieved by cascading 30 generate\n31 for(i=0;i<16;i=i+1) begin\nlevels where the generate and propagate signals are combined 32 if(i<2) begin\nto compute the carry to further levels with longer distances 33 assign G2[i]=G1[i];\n34 assign P2[i]=P1[i];\nin terms of number of full adder bits between signals. FPGA 35 end else begin\noptimized behavioraler uses a single arithmetic equation, al- 36 assign G2[i]=G1[i] | (P1[i] & G1[i-2]);\n37 assign P2[i]=P1[i] & P1[i-2];\nlowing the synthesis tool to implement a carry chain. 38 end\n39 end\n40 endgenerate\nB. Top-Le"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 18,
+    "text": "[i] | (P1[i] & G1[i-2]);\n37 assign P2[i]=P1[i] & P1[i-2];\nlowing the synthesis tool to implement a carry chain. 38 end\n39 end\n40 endgenerate\nB. Top-Level Integration 41\n42 // Stage 3 (distance 4)\nThe various adder designs were incorporated into one unit 43 generate\n44 for(i=0;i<16;i=i+1) begin\nusing a top level integration module. In this implementation 45 if(i<4) begin\ninputs from FPGA switches were clocked through registers 46 assign G3[i]=G2[i];\n47 assign P3[i]=P2[i];\nto avoid timing issues. The push button was used to ensure 48 end else begin\nreliable synchronous loading of operands to the registers to 49 assign G3[i]=G2[i] | (P2[i] & G2[i-4]);\n50 assign P3[i]=P2[i] & P2[i-4];\nallow cons"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 19,
+    "text": "in\nreliable synchronous loading of operands to the registers to 49 assign G3[i]=G2[i] | (P2[i] & G2[i-4]);\n50 assign P3[i]=P2[i] & P2[i-4];\nallow consistent test inputs. The user is able to switch the 51 end\nadder to use through turning the relevant instantiation on or 52 end\n53 endgenerate\noff. The output sum from the adder is routed to the onboard\nLEDs. 55 // Stage 4 (distance 8)\n56 generate\n57 for(i=0;i<16;i=i+1) begin\nC. FPGA Mapping and Constraints 58 if(i<8) begin\n59 assign G4[i]=G3[i];\n60 assign P4[i]=P3[i];\nAn XDC file was used for FPGA mapping. Input switches 61 end else begin\nwere assigned to operands, push buttons to carry inputs and 62 assign G4[i]=G3[i] | (P3[i] & G3[i-8]);\n63 a"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 20,
+    "text": " mapping. Input switches 61 end else begin\nwere assigned to operands, push buttons to carry inputs and 62 assign G4[i]=G3[i] | (P3[i] & G3[i-8]);\n63 assign P4[i]=P3[i] & P3[i-8];\nloading signals and the system clock to the onboard 100Mhz 64 end\nclock. Output LED signals were directly assigned. 65 end\n66 endgenerate\nD. Synthesis and Implementation Flow 68 assign C[0] = Cin;\nThe code was synthesized and implemented using Vivado 70 generate\n71 for(i=0;i<16;i=i+1) begin\nDesign Suite. Following synthesis the implementation was 72 assign C[i+1] = G4[i] | (P4[i] & Cin);\nfollowed by a placement and routing step. A bitstream was 73 end\n74 endgenerate\ngenerated and programmed to the FPGA where the des"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 21,
+    "text": "i] | (P4[i] & Cin);\nfollowed by a placement and routing step. A bitstream was 73 end\n74 endgenerate\ngenerated and programmed to the FPGA where the design 75\nwastestedusingswitchesforoperandinputs,pushbuttonsfor 76 assign Sum = P ˆ C[15:0];\n77 assign Cout = C[16];\nloading inputs and LEDs for displaying output sum. 78\n79 endmodule\nE. Verilog Implementation Snippets\nThe Kogge-Stone Adder computes carry signals in parallel\n1) Kogge-Stone Adder (16-bit): using prefix stages, reducing propagation delay.\n2) FPGA-Optimized Behavioral Adder: VII. EXPERIMENTALRESULTS\nThe performance of all four adder architectures was evalu-\n1 module adder_fpga_best(\n2 input [15:0] A, B, ated using Vivado synthesis an"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 22,
+    "text": "MENTALRESULTS\nThe performance of all four adder architectures was evalu-\n1 module adder_fpga_best(\n2 input [15:0] A, B, ated using Vivado synthesis and timing analysis reports.The\n3 input Cin, 16-bit implementations were synthesized and evaluated by\n4 output [15:0] Sum,\n5 output Cout looking at delays, and usage of FPGA resources (LUTs). The\n6 ); details are provided below in a table below:\n8 assign {Cout, Sum} = A + B + Cin; RCA showed high latency due to its serial carry computa-\n9 tion, however requires less resources than other designs. The\n10 endmodule\nCLA-style adder is slightly better than RCA, though still uses\nserial carry generation.\nThis behavioral implementation allows FPGA tools"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 23,
+    "text": "\n10 endmodule\nCLA-style adder is slightly better than RCA, though still uses\nserial carry generation.\nThis behavioral implementation allows FPGA tools to map\nThe Kogge-Stone adder has a low delay due to parallel\nthe design onto dedicated carry-chain hardware for optimized\ncarrycomputationbuthasincreasedresourceusageduetothe\nperformance.\nlarger design complexity. The FPGA optimized behavioraler\nishighlycompetitivebecauseofitsoptimizedparallelcompu-\nVI. CHALLENGESANDRESOLUTIONS tation, often beating other designs due to FPGA-level carry-\nchainoptimizationwhichallowsveryfastarithmeticcomputa-\nA. FPGA Carry Chain Optimization\ntionsbyimplementingitdirectlytodedicatedhardwarecarry-\nFPGA synthesis "
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 24,
+    "text": "imizationwhichallowsveryfastarithmeticcomputa-\nA. FPGA Carry Chain Optimization\ntionsbyimplementingitdirectlytodedicatedhardwarecarry-\nFPGA synthesis tools automatically map arithmetic opera- chain design on FPGA.\ntionstodedicatedcarry-chainhardware,causingthebehavioral Overall, the results highlight that while theoretical archi-\nadder to outperform manual designs. tectures like Kogge-Stone offer reduced delay, FPGA-specific\nResolution: All architectures were tested under identical optimizations play a crucial role in determining practical\nconditions to ensure fair comparison. performance.\nVIII. ADVANTAGESANDDISADVANTAGES\nB. Routing Complexity in Kogge-Stone Adder\nA. Advantages\nThe multi-sta"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 25,
+    "text": "itions to ensure fair comparison. performance.\nVIII. ADVANTAGESANDDISADVANTAGES\nB. Routing Complexity in Kogge-Stone Adder\nA. Advantages\nThe multi-stage prefix structure of the Kogge-Stone Adder\n• Simultaneous testing of multiple carry adder implemen-\nincreased routing complexity and hardware usage.\ntations on an FPGA board.\nResolution: A modular design approach was used to man-\n• The Kogge-Stone adder displays a high level of speed\nage interconnections efficiently.\nefficiency.\n• The FPGA optimized behavioraler is efficient as it uses\nC. Timing and Critical Path Delay the built in carry-chain hardware of the FPGA.\n• Modular design allowed easy comparison between the\nDifferent adder architect"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 26,
+    "text": " and Critical Path Delay the built in carry-chain hardware of the FPGA.\n• Modular design allowed easy comparison between the\nDifferent adder architectures exhibited varying critical path\ndifferent adder designs.\ndelays, affecting performance comparison.\nResolution: Vivado timing reports were analyzed to accu- B. Disadvantages\nrately evaluate the delay for each design.\n• The Kogge-Stone adder is resource-heavy and leads to\nhigh complexity in routing.\nD. Input Stability • The RCA and CLA adder style adders have high latency,\ndue to serial carry generation.\nDirect FPGA switch inputs can be unstable due to asyn-\n• FPGAimplementationofeachaddercanleadtodifferent\nchronous changes.FPGA switches are"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 27,
+    "text": "eneration.\nDirect FPGA switch inputs can be unstable due to asyn-\n• FPGAimplementationofeachaddercanleadtodifferent\nchronous changes.FPGA switches are inherently noisy signals\nresultcomparisonsthantheoreticaldesigndifferencesdue\nwhen connected directly.\nto usage of different FPGA features.\nResolution: It was necessary to pass them through clock\ncontrolledregisteredflip-flopstomaketheinputsignalsstable IX. CHALLENGESANDOBSERVATIONS\nand usable with the system clock.\nA. FPGA Carry Chain Optimization\nFPGA architectures include dedicated carry chains that\nE. Verification Across Designs\noptimize arithmetic operations. This significantly improves\nValidating multiple adder implementations simultaneo"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 28,
+    "text": "s that\nE. Verification Across Designs\noptimize arithmetic operations. This significantly improves\nValidating multiple adder implementations simultaneously the performance of RCA, making it more competitive than\nincreased testing complexity. expected.\nResolution: A unified testbench with automated testing\nB. Resource Utilization\neach on individually for correctness against reference signals\nandensuresalldesignswerecorrectlyfunctioningasdesigned The Kogge-Stone adder requires a higher number ofLUTs\nbefore comparing performances. was used to ensure correct- compared to an RCA due to its more complex parallel archi-\nness. tecture.\nX. CONCLUSION\nInthisprojectdifferent16-bitcarryadderdesignshavebe"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 29,
+    "text": "e correct- compared to an RCA due to its more complex parallel archi-\nness. tecture.\nX. CONCLUSION\nInthisprojectdifferent16-bitcarryadderdesignshavebeen\ntested and compared using a real hardware implementation\non an FPGA board. The results obtained suggest that while\nsimpledesignslikeRCAandCLAdoexhibitlesscomplexity,\nthey do also possess greater latency than the parallel Kogge-\nStone Adder design. The FPG A-optimized design performs\ncompetitivelyandithasbeenconcludedthatafullyoptimized\nFPGA adder may be the most appropriate when speed and a\ncompromise in resource usage are priorities.\nFUTUREWORK\nOther parallel prefix adders such as the Brent-Kung and\nSklansky adder can be implemented to furt"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 30,
+    "text": "promise in resource usage are priorities.\nFUTUREWORK\nOther parallel prefix adders such as the Brent-Kung and\nSklansky adder can be implemented to further compare the\nperformance of the implementations on FPGA, and the power\nconsumption of each adder design could be investigated.\nFurther attempts to optimize the Kogge-Stone adder would\nresult in reduced resource usage on the FPGA board and po-\ntentially more competitive performance against the optimized\nbehavioral design. Additionally, optimization techniques and\npipeliningcanbeexploredtoimproveperformanceandreduce\nhardware utilization on FPGA.\nACKNOWLEDGMENT\nWe would like to acknowledge the support given by our\nprofessorsProf.KamalKishoreJha"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 31,
+    "text": "performanceandreduce\nhardware utilization on FPGA.\nACKNOWLEDGMENT\nWe would like to acknowledge the support given by our\nprofessorsProf.KamalKishoreJhaandinmakingthisproject\na success. I would also like to express my gratitude to our\ninstitution for providing all necessary resources to complete\nthis work.\nREFERENCES\n[1] K. R. Kumar, K. Murugan, T. Shanmugaraja, and M. Supriya, “Low\nPower Multiplier using SPST based on Kogge Stone Adder,” in Proc.\n2023 Int. Conf. Distributed Computing and Electrical Circuits and\nElectronics(ICDCECE),2023,pp.1–5.\n[2] “An FPGA Implementation of a 16-bit Adder for Signed Magnitude\nNumbers,”July2025,doi:10.1109/ICWT66752.2025.11181777.\n[3] S. Mohakud, A. Bisoyi, a"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 32,
+    "text": "[2] “An FPGA Implementation of a 16-bit Adder for Signed Magnitude\nNumbers,”July2025,doi:10.1109/ICWT66752.2025.11181777.\n[3] S. Mohakud, A. Bisoyi, and A. Tripathy, “FPGA implementation\nof 16-bit adders and their comparative analysis based on latency in\ndatapath and on-chip power,” Journal of Systems Engineering and\nElectronics,vol.34,pp.270–285,2024.\n[4] P. Chakali and M. K. Patnala, “Design of high speed Kogge-Stone\nbased carry select adder,” International Journal of Emerging Science\nandEngineering,vol.1,no.4,2013.\n[5] D. K. JR and S. P. Karthi, “Performance Analysis of 16-bit Adders\nin High-Speed Computing Applications,” in Proc. 2019 Int. Conf.\nAdvances in Computing and Communication En"
+  },
+  {
+    "doc_id": "a8f85021-4b81-4db5-9244-d3aabe7c164f",
+    "chunk_index": 33,
+    "text": "thi, “Performance Analysis of 16-bit Adders\nin High-Speed Computing Applications,” in Proc. 2019 Int. Conf.\nAdvances in Computing and Communication Engineering (ICACCE),\n2019,pp.1–7.\n[6] S.DaphniandK.S.Grace,“DesignofanAreaEfficientKogge-Stone\nAdderusingPassTransistorLogic,”inProc.2021Int.Conf.Intelligent\nComputingandControlSystems(ICICV),2021,pp.614–618."
+  }
+]

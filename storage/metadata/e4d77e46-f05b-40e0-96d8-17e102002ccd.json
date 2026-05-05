@@ -1,0 +1,11 @@
+{
+  "doc_id": "e4d77e46-f05b-40e0-96d8-17e102002ccd",
+  "original_filename": "test.pdf",
+  "pdf_path": "storage\\original_pdfs\\e4d77e46-f05b-40e0-96d8-17e102002ccd.pdf",
+  "text_path": "storage\\texts\\e4d77e46-f05b-40e0-96d8-17e102002ccd.txt",
+  "is_scanned": true,
+  "text_length": 3101,
+  "uploaded_at": "2026-01-26T09:04:21.991690",
+  "chunk_count": 3,
+  "chunk_path": "storage/chunks\\e4d77e46-f05b-40e0-96d8-17e102002ccd.json"
+}

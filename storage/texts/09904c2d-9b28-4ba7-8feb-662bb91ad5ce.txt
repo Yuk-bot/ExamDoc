@@ -1,0 +1,413 @@
+ChatSphere
+Real-Time Chat Application Project Report
+Submitted by:
+Group 11
+Department:
+Computer Science
+College/University:
+Indian Institute of Information Technology Vadodara
+Academic Year:
+(2025-2026)
+Project Guide:
+Dr. Pooja Mishra
+Project Report
+Acknowledgement
+We would like to express our sincere gratitude to our project guide, Prof. Pooja
+Mishra, for her valuable guidance, continuous support, and encouragement through-
+out the development of this project. Her insights and suggestions greatly helped us in
+shaping this project successfully.
+We also extend our thanks to our Teaching Assistant, Tejas Kalal, for his assis-
+tance and timely guidance during the project work.
+Lastly, we would like to thank our department and institute for providing us with
+the necessary resources and environment to complete this project.
+i
+Abstract
+ChatSphere is a modern real-time chat application designed to provide an organized
+andefficientcommunicationplatform. ThemainobjectiveofChatSphereistoseparate
+professional and casual conversations by introducing two distinct modes: Work Mode
+and Private Mode. This separation helps users manage important discussions and
+personal chats more effectively.
+Theapplicationbeginswithalandingpagethatintroducestheprojectandprovides
+optionsforuserregistrationandlogin. Duringregistration, usersenteressentialdetails
+such as name, email, password, and a security question-answer pair, which supports
+the password recovery process. If a user forgets their password, the system verifies
+identity by asking the stored security question, and only upon correct answer the
+password can be reset.
+After successful login, users are directed to a homepage where they can select
+either Work Mode or Private Mode. Based on the selected mode, users access a
+chat interface that supports direct messaging, room-based group chats, and advanced
+features such as starred messages, message categorization, file storage, and real-time
+message editing. The application also provides message search functionality using
+stringsearchingmethods. Additionally,ChatSpheresupportsthemeswitchingbetween
+dark and light mode for better user experience.
+Overall, ChatSphere aims to provide a secure, scalable, and user-friendly commu-
+nication system with enhanced organization features like message categorization and
+file management, making it suitable for both personal and professional use cases.
+ii
+Contents
+1 Introduction 1
+1.1 Project Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.2 Purpose of the Project . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.3 Scope of the Project . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.4 Problems in Existing Systems . . . . . . . . . . . . . . . . . . . . . . . 2
+1.5 Objectives of the Project . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+2 Requirement Analysis 3
+2.1 Functional Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2.2 Non-Functional Requirements . . . . . . . . . . . . . . . . . . . . . . . 4
+2.2.1 Security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.2.2 Performance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.2.3 Usability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.2.4 Scalability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.2.5 Reliability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.3 Hardware Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.4 Software Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2.5 Technology Stack . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+3 Design and Architecture 6
+3.1 System Architecture . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3.2 Use Case Diagram (Textual Representation) . . . . . . . . . . . . . . . 6
+3.3 Data Flow Explanation . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+3.4 Database Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+3.5 UI/UX Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+4 Implementation Details 9
+4.1 Landing Page Module . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+4.2 User Registration Module . . . . . . . . . . . . . . . . . . . . . . . . . 9
+4.3 Login Module . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+iii
+ChatSphere Project Report iv
+4.4 Forgot Password Module . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+4.5 Mode Selection Module . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+4.6 Chat Module (Direct Messaging) . . . . . . . . . . . . . . . . . . . . . 10
+4.7 Rooms Module (Group Chat) . . . . . . . . . . . . . . . . . . . . . . . 11
+4.8 Starred Messages Module . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+4.9 File Storage Module . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+4.10 Search Module . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+4.11 User Settings Module . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+4.12 Theme Switching Module . . . . . . . . . . . . . . . . . . . . . . . . . 12
+4.13 Mode Switching Module . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+5 Testing and Deployment 13
+5.1 Testing Strategy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+5.2 Test Cases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+5.3 Deployment . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+6 Conclusion and Future Work 16
+6.1 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+6.2 Future Work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+Chapter 1
+Introduction
+1.1 Project Overview
+ChatSphere is a real-time chat web application that allows users to communicate
+through direct messaging and group rooms. The application introduces two sepa-
+rate chat environments: Work Mode and Private Mode. This enables users to keep
+professional conversations and personal conversations separate within the same plat-
+form. ChatSphere also includes organizational features such as starred messages with
+category grouping and file storage with categorization.
+1.2 Purpose of the Project
+The purpose of ChatSphere is to provide a messaging platform that is structured and
+organized. Many chat applications focus mainly on communication but do not offer
+efficient ways to manage important messages or store files in a categorized manner.
+ChatSphere solves this by introducing message starring, category management, and a
+dedicated file storage system.
+1.3 Scope of the Project
+The scope of ChatSphere includes:
+• User authentication system (register, login, logout).
+• Forgot password feature using security question verification.
+• Mode-based chatting (Work Mode and Private Mode).
+• One-to-one direct chat with registered users.
+ChatSphere Project Report 2
+• Room-based group chatting with join/leave functionality.
+• Starred message feature with user-defined categories.
+• File storage management with categories.
+• Real-time messaging and message editing.
+• Message search feature.
+• User profile settings for updating name and password.
+• Theme switching between light and dark mode.
+1.4 Problems in Existing Systems
+Existing messaging applications face several limitations such as:
+• No proper separation between professional and personal chats.
+• Difficulty in managing important messages due to lack of categorization.
+• No structured storage system for files shared within chats.
+• Limited search functionality.
+• Poor customization options for user interface themes.
+1.5 Objectives of the Project
+The main objectives of ChatSphere are:
+• To provide a secure and user-friendly chat application.
+• To enable users to separate professional and casual chats.
+• To allow users to organize important messages using starred categories.
+• To provide a categorized file storage feature.
+• To support real-time communication and message editing.
+• To provide an efficient message searching feature.
+Chapter 2
+Requirement Analysis
+2.1 Functional Requirements
+The functional requirements of ChatSphere are:
+• The system shall allow new users to register using name, email, and password.
+• The system shall store a security question and answer for password recovery.
+• The system shall allow users to login using email and password.
+• The system shall provide forgot password functionality using security question
+verification.
+• The system shall allow users to select chat mode (Work or Private) after login.
+• The system shall support one-to-one direct messaging.
+• The system shall allow users to create chat rooms with name and description.
+• The system shall allow users leave chat rooms.
+• The system shall allow users to star important messages.
+• The system shall allow users to create categories and store starred messages in
+categories.
+• The system shall allow users to upload and store files.
+• The system shall allow users to categorize files for better organization.
+• The system shall support real-time message sending and receiving.
+• The system shall allow users to edit their messages.
+ChatSphere Project Report 4
+• The system shall allow users to search messages using string searching.
+• The system shall provide user settings to update name and password.
+• The system shall allow switching between dark mode and light mode.
+2.2 Non-Functional Requirements
+2.2.1 Security
+• security question answer is hashed
+• Authentication should be required to access chat features.
+2.2.2 Performance
+• The system should handle real-time messaging efficiently.
+• Chat messages should load quickly with minimal delay.
+2.2.3 Usability
+• The UI should be simple and easy to navigate.
+• Features like mode selection and search should be accessible.
+2.2.4 Scalability
+• The system should be able to handle multiple users and rooms.
+2.2.5 Reliability
+• The application should ensure message delivery in real time.
+• The system should maintain data consistency in database.
+2.3 Hardware Requirements
+• Minimum 4GB RAM
+• Minimum Intel i3 or equivalent processor
+• Stable internet connection
+ChatSphere Project Report 5
+• Storage: 1GB free space
+2.4 Software Requirements
+• Operating System: Windows
+• Browser: Chrome/Firefox/Edge
+• Backend Framework: Flask
+• Frontend Framework: React (Vite)
+• Database: SQLite with SQLAlchemy
+• File Storage: Cloudinary
+2.5 Technology Stack
+• Frontend: React + Vite
+• Backend: Flask (Python)
+• Database: SQLite with SQLAlchemy
+• File Storage: Cloudinary
+• Tools: Git, VS Code
+Chapter 3
+Design and Architecture
+3.1 System Architecture
+ChatSphere follows a client-server architecture:
+• Frontend: Provides UI for users to register, login, and chat.
+• Backend: Handles authentication, message handling, room management, and
+storage.
+• Database: Storesuserdetails,messages,rooms,starredmessages,andfilemeta-
+data.
+3.2 Use Case Diagram (Textual Representation)
+The major use cases include:
+• Register User
+• Login User
+• Forgot Password
+• Select Chat Mode
+• Start New Chat
+• Create Room
+• Join/Leave Room
+• Send Message
+ChatSphere Project Report 7
+• Edit Message
+• Star Message
+• Categorize Starred Messages
+• Upload File
+• Categorize Files
+• Search Messages
+• Switch Theme
+• Update Profile
+3.3 Data Flow Explanation
+The data flow begins with user authentication. After login, the user selects a mode.
+The system loads the corresponding chat environment. Messages are sent from the
+frontend to backend and stored in database. For rooms, messages are broadcasted to
+all members. Starred messages and file uploads are stored separately with category
+mapping.
+3.4 Database Design
+The database includes tables such as:
+• Users Table (name, email, password, security question, answer)
+• Messages Table (sender, receiver/room, content, timestamp, mode)
+• Rooms Table (room name, description, members)
+• Starred Messages Table (message id, user id, category id)
+• Categories Table (category name, id , userId)
+• Files Table (file name, file path, uploaded by, category id)
+ChatSphere Project Report 8
+3.5 UI/UX Design
+The user interface consists of:
+• Landing Page with login/register buttons
+• Registration Page with form fields
+• Login Page with authentication form
+• Forgot Password Page with security question verification
+• Homepage with mode selection (Work/Private)
+• Chat Page with new chat, rooms, starred messages, and file storage
+• Settings Page for user profile updates
+Chapter 4
+Implementation Details
+4.1 Landing Page Module
+The landing page is the first interface visible to users. It contains:
+• Project information and description
+• Register button
+• Login button
+This page serves as the entry point and provides basic awareness about ChatSphere.
+4.2 User Registration Module
+The registration module collects the following user information:
+• Name
+• Email
+• Password
+• Security Question
+• Security Answer
+After successful registration, the user information is stored in the database.
+ChatSphere Project Report 10
+4.3 Login Module
+The login module verifies user credentials using:
+• Email
+• Password
+Once authenticated, the user is redirected to the homepage.
+4.4 Forgot Password Module
+The forgot password feature works as follows:
+1. User clicks on Forgot Password.
+2. The system displays the stored security question.
+3. User enters the security answer.
+4. If the answer matches, the user is allowed to reset password.
+This improves security and ensures only the legitimate user can reset their password.
+4.5 Mode Selection Module
+After login, the user selects between:
+• Work Mode (for important and professional chats)
+• Private Mode (for casual and personal chats)
+This selection loads the corresponding chat interface.
+4.6 Chat Module (Direct Messaging)
+The direct chat module allows users to:
+• Start a new conversation with any registered user.
+• Send messages in real time.
+• Edit previously sent messages.
+ChatSphere Project Report 11
+4.7 Rooms Module (Group Chat)
+The rooms feature allows users to:
+• Create a room with room name and description.
+• Leave a room when required.
+Rooms provide a group communication environment.
+4.8 Starred Messages Module
+ChatSphere allows users to star important messages. Starred messages are stored
+separately and displayed on the Starred Messages page. Users can also:
+• Create categories for starred messages.
+• Store starred messages under different categories.
+• Change Category for a particular starred message
+This feature helps in organizing and quickly retrieving important information.
+4.9 File Storage Module
+ChatSphere provides file storage functionality where users can:
+• Upload files.
+• Store files securely.
+• Organize files into user-created categories.
+This is similar to a file manager system inside the chat platform.
+4.10 Search Module
+The search module allows users to search messages using string searching techniques.
+This feature improves accessibility by enabling users to find previous messages quickly.
+ChatSphere Project Report 12
+4.11 User Settings Module
+The user settings page allows:
+• Viewing user information
+• Updating name
+• Changing password
+4.12 Theme Switching Module
+ChatSphere supports:
+• Dark mode
+• Light mode
+This enhances the user experience and provides customization.
+4.13 Mode Switching Module
+Users can switch between Work Mode and Private Mode anytime. This ensures flexi-
+bility and improves chat organization.
+Chapter 5
+Testing and Deployment
+5.1 Testing Strategy
+Testing ensures that all modules function correctly. The following testing approaches
+were used:
+• Unit Testing for individual functions.
+• Integration Testing for combined module flow.
+• Functional Testing for feature correctness.
+• UI Testing for design and responsiveness.
+5.2 Test Cases
+ID Feature Input Expected Output Status
+TC01 Registration Valid details User registered suc- Pass
+cessfully
+TC02 Registration Existing email Error: Email already Pass
+exists
+TC03 Login Valid email/password Redirect to homepage Pass
+TC04 Login Wrong password Login failed message Pass
+TC05 Forgot Password Correct security an- Allow password reset Pass
+swer
+TC06 Forgot Password Wrong security an- Error message dis- Pass
+swer played
+ChatSphere Project Report 14
+TC07 Mode Selection Select Work Mode Redirect to Work chat Pass
+page
+TC08 Mode Selection Select Private Mode Redirect to Private Pass
+chat page
+TC09 Direct Chat Send message Message appears in Pass
+real time
+TC10 Edit Message Modify message Message updated suc- Pass
+cessfully
+TC11 Room Creation Room name + de- Room created success- Pass
+scription fully
+TC12 Leave Room Leave room action User removed from Pass
+room
+TC13 Star Message Star any message Message stored in Pass
+starred list
+TC14 Categorize Starred Assign category Message appears in Pass
+Message category
+TC15 Theme Switch Toggle dark/light UI changes theme suc- Pass
+cessfully
+TC16 File Upload Upload valid file File uploaded success- Pass
+fully
+TC17 File Upload Upload failure (net- Upload failed message Pass
+work/error) displayed
+TC18 File Download Download file Original file down- Pass
+loaded successfully
+TC19 File Download Failed/corrupt down- Binary/incorrect file Pass
+load downloaded
+TC20 File Categorization Assign category File stored under cat- Pass
+egory
+TC21 File Categorization No category assigned File still stored (un- Pass
+categorized)
+5.3 Deployment
+For local deployment:
+• Install required dependencies.
+ChatSphere Project Report 15
+• Run backend server.
+• Run frontend development server.
+• Ensure database is connected properly.
+Chapter 6
+Conclusion and Future Work
+6.1 Conclusion
+ChatSphere is a real-time chat application that provides an organized communication
+platform by separating conversations into Work Mode and Private Mode. It includes
+essential features such as direct messaging, room-based group chats, message editing,
+starred messages categorization, file storage management, and message search func-
+tionality. The system ensures improved usability and better organization compared to
+traditional chat applications.
+The project successfully fulfills its objectives by implementing a secure authenti-
+cation system, efficient real-time communication, and advanced organization tools for
+messages and files.
+6.2 Future Work
+In future, ChatSphere can be enhanced by adding:
+• Voice and video calling features.
+• End-to-end encryption for improved security.
+• Push notifications for new messages.
+• Message reactions and emojis.
+• AI-based smart reply suggestions.
+• Cloud-based storage integration for files.
+• Admin dashboard for room management.
+Keywords
+ChatSphere, Real-time Chat Application, Work Mode, Private Mode, Authentication,
+Chat Rooms, Starred Messages, File Storage, Message Search, Dark Mode
+Project Summary
+ChatSphere is a real-time messaging web application that provides a structured and
+organized communication system. It allows users to register and login securely, re-
+cover passwords using security questions, and chat in two distinct modes: Work and
+Private. Theapplicationsupportsdirectmessaging, grouprooms, starredmessagecat-
+egorization, andfilestoragewithcategories. Additionalfeatureslikereal-timeupdates,
+message editing, theme switching, and message search make ChatSphere efficient and
+user-friendly.

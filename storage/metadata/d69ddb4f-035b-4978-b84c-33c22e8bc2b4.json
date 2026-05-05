@@ -1,0 +1,11 @@
+{
+  "doc_id": "d69ddb4f-035b-4978-b84c-33c22e8bc2b4",
+  "original_filename": "essay.pdf",
+  "pdf_path": "storage\\original_pdfs\\d69ddb4f-035b-4978-b84c-33c22e8bc2b4.pdf",
+  "text_path": "storage\\texts\\d69ddb4f-035b-4978-b84c-33c22e8bc2b4.txt",
+  "is_scanned": false,
+  "text_length": 9478,
+  "uploaded_at": "2026-01-28T14:37:59.556549",
+  "chunk_count": 18,
+  "chunk_path": "storage/chunks\\d69ddb4f-035b-4978-b84c-33c22e8bc2b4.json"
+}

@@ -1,0 +1,11 @@
+{
+  "doc_id": "84122334-8325-4bd4-9525-0cc4ba27f0bc",
+  "original_filename": "test.pdf",
+  "pdf_path": "storage\\original_pdfs\\84122334-8325-4bd4-9525-0cc4ba27f0bc.pdf",
+  "text_path": "storage\\texts\\84122334-8325-4bd4-9525-0cc4ba27f0bc.txt",
+  "is_scanned": true,
+  "text_length": 3101,
+  "uploaded_at": "2026-02-01T20:37:33.253904",
+  "chunk_count": 6,
+  "chunk_path": "storage/chunks\\84122334-8325-4bd4-9525-0cc4ba27f0bc.json"
+}

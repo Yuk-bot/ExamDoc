@@ -1,0 +1,11 @@
+{
+  "doc_id": "e51c2827-bd5f-4f20-af11-38e8e72d8d24",
+  "original_filename": "case_study.pdf",
+  "pdf_path": "storage\\original_pdfs\\e51c2827-bd5f-4f20-af11-38e8e72d8d24.pdf",
+  "text_path": "storage\\texts\\e51c2827-bd5f-4f20-af11-38e8e72d8d24.txt",
+  "is_scanned": false,
+  "text_length": 19137,
+  "uploaded_at": "2026-01-27T07:15:13.553502",
+  "chunk_count": 35,
+  "chunk_path": "storage/chunks\\e51c2827-bd5f-4f20-af11-38e8e72d8d24.json"
+}

@@ -1,0 +1,12 @@
+{
+  "doc_id": "b6a09ac8-386a-45f5-ae67-4fb1de00a479",
+  "original_filename": "invoice (4).pdf",
+  "pdf_path": "storage\\original_pdfs\\b6a09ac8-386a-45f5-ae67-4fb1de00a479.pdf",
+  "text_path": "storage\\texts\\b6a09ac8-386a-45f5-ae67-4fb1de00a479.txt",
+  "is_scanned": false,
+  "text_length": 898,
+  "uploaded_at": "2026-04-10T13:48:05.181990",
+  "chunk_count": 2,
+  "chunk_path": "storage/chunks\\b6a09ac8-386a-45f5-ae67-4fb1de00a479.json",
+  "summary_path": "storage/summary\\b6a09ac8-386a-45f5-ae67-4fb1de00a479.json"
+}

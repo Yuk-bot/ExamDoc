@@ -1,0 +1,6 @@
+shape
+size
+texture
+association
+tone
+color
