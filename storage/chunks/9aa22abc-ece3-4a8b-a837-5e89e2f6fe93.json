@@ -1,7 +1,0 @@
-[
-  {
-    "doc_id": "9aa22abc-ece3-4a8b-a837-5e89e2f6fe93",
-    "chunk_index": 0,
-    "text": "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;\n\nSession 1 (T1)\nSTART TRANSACTION;\n\nUPDATE bank SET balance = balance * 2 WHERE acc_id = 1;\n-- DO NOT COMMIT\n\nSession 2 T2\nSTART TRANSACTION;\n\nSELECT * FROM bank WHERE acc_id = 1;\n\nselect * from sales_management where product_id=201 FOR SHARE;\n\n–for write xclusive lock\nSTART TRANSACTION;\nSELECT * FROM orders WHERE order_id = 5002 FOR UPDATE;\nUPDATE orders SET status = 'processed' WHERE order_id = 5004;\nCOMMIT;\n\nPassword hashing\nVALUES\n('rahul', 'rahul@mail.com',\n@s1 := UUID(),\nSHA2(CONCAT('rahul123', @s1), 256)\n),\n"
-  }
-]
