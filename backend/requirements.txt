@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-multipart
+
+
+langchain
+langchainhub
+langchain-community
+
+google-ai-generativelanguage
+google-api-python-client
+
+pdfplumber
+python-docx
+sentence-transformers

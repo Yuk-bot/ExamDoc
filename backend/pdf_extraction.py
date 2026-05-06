@@ -1,7 +1,6 @@
 import pdfplumber
-from pdf2image import convert_from_path
-import pytesseract
-import tempfile
+
+from docx import Document
 import re
 
 
@@ -18,19 +17,12 @@ def extract_text_and_type(pdf_path: str, min_text_length: int = 100) -> tuple[st
         return text, False
     
     else:
-        ocr_text = ""
-        with tempfile.TemporaryDirectory() as temp_dir:
-            images = convert_from_path(pdf_path, dpi=300, output_folder=temp_dir)
-            for img in images:
-                ocr_text += pytesseract.image_to_string(img) + "\n"
-
-        return ocr_text.strip(), True
-
+        return ("Still working on the deployement of scanned images via oce. Sorry will bw done soon", True)
+    
 def extract_from_txt(file_path: str) -> str:
     with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
         return f.read()
 
-from docx import Document
 
 def extract_from_docx(file_path: str) -> str:
     doc = Document(file_path)

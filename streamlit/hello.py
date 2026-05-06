@@ -177,8 +177,7 @@ with st.sidebar:
 
 
 doc_loaded = st.session_state.uploaded_file is not None
-doc_name = st.session_state.uploaded_file.name if doc_loaded else "Idle"
-
+doc_name = st.session_state.uploaded_file.name if doc_loaded else "@mydocument"
 st.markdown(f"""
 <div class="topbar">
     <span>Workspace</span>
