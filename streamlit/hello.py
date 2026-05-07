@@ -4,7 +4,7 @@ import os
 
 
 st.set_page_config(
-    page_title="ExamDoc AI",
+    page_title="ExamDoc",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -122,6 +122,8 @@ html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 }
 </style>
 """, unsafe_allow_html=True)
+
+st.title("ExamDoc- Come let's top woohoo! :)")
 
 with st.sidebar:
 

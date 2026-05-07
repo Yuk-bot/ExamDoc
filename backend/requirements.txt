@@ -10,6 +10,7 @@ langchain-community
 google-ai-generativelanguage
 google-api-python-client
 
+faiss-cpu==1.7.4
 pdfplumber
 python-docx
 sentence-transformers
