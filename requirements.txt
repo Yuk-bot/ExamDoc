@@ -14,3 +14,5 @@ faiss-cpu
 pdfplumber
 python-docx
 sentence-transformers
+
+#frontend -streamlit
