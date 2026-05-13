@@ -27,6 +27,9 @@ class QueryRequest(BaseModel):
 
 app= FastAPI() #fast api object 
 
+class FileUploadRequest(BaseModel):
+    files: List[UploadFile]
+
 @app.post("/query")
 def query_documents(request: QueryRequest):
     results = search_faiss(
@@ -64,8 +67,10 @@ ALLOWED_EXTENSIONS = {".pdf", ".docx", ".txt"}
 @app.get("/")
 def display():
     return{"done"}
+
+
 @app.post("/upload-files")
-async def upload_multiple(files: List[UploadFile] = File(...)):
+async def upload_multiple(files: List[UploadFile] = File(..., description="Upload your files here")):
     results = []
 
     for file in files:
