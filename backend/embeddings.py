@@ -1,4 +1,6 @@
 #from sentence_transformers import SentenceTransformer
+import torch
+torch.set_num_threads(1)
 model = None
 
 def get_model():
