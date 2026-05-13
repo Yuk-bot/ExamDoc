@@ -14,5 +14,5 @@ faiss-cpu
 pdfplumber
 python-docx
 sentence-transformers
-
+google-genai
 #frontend -streamlit
