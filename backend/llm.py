@@ -25,7 +25,7 @@ def generate_answer(query:str, context: str):
     
     prompt=build_prompt(query, context)
 
-    response=client.models.generate_content(model='gemini-2.5-flash-lite', contents=prompt)
+    response=client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
     ans=""
     if response.text: #if response generation is successful 
         ans=response.text.strip()
@@ -52,7 +52,7 @@ Do not merge chunks.
 {text}
 """
 
-    response=client.models.generate_content(model='gemini-2.5-flash-lite', contents=prompt)
+    response=client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
     ans=""
     if response.text: #if response generation is successful 
         ans=response.text.strip()
@@ -79,7 +79,7 @@ TEXT:
 {merged_summary}
 """
 
-    response=client.models.generate_content(model='gemini-2.5-flash-lite', contents=final_prompt)
+    response=client.models.generate_content(model='gemini-2.5-flash', contents=final_prompt)
     ans=""
     if response.text: #if response generation is successful 
         ans=response.text.strip()
