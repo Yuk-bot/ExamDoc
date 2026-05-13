@@ -4,9 +4,9 @@ import os
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from backend.storage import generate_doc_id
+from backend.embeddings import model
 
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
 
 doc_id=generate_doc_id()
 FAISS_DIR = f"storage/faiss"
@@ -15,28 +15,21 @@ INDEX_PATH=f"{FAISS_DIR}/index.faiss"
 META_PATH=f"{FAISS_DIR}/metadata.json"
 
 def build_or_update_faiss(embeddings, metadatas):
+
     if len(embeddings) != len(metadatas):
-        raise ValueError(
-            "Embeddings and metadata length mismatch"
-        )
+        raise ValueError("Embeddings and metadata length mismatch")
 
     vectors = np.array(embeddings).astype("float32")
-    #faiss.normalize_L2(vectors) #normalized vector for query
 
-    if os.path.exists(INDEX_PATH):
-        index = faiss.read_index(INDEX_PATH)
-        with open(META_PATH, "r", encoding="utf-8") as f:
-            existing_meta = json.load(f)
-    else:
-        index = faiss.IndexFlatL2(vectors.shape[1])
-        existing_meta = []
-
+    # Create new index every upload
+    index = faiss.IndexFlatIP(vectors.shape[1])
     index.add(vectors)
-    existing_meta.extend(metadatas)
 
-    faiss.write_index(index, INDEX_PATH)
+    faiss.write_index(index, INDEX_PATH)# Save fresh index
+
+    #overwrite with new indexes
     with open(META_PATH, "w", encoding="utf-8") as f:
-        json.dump(existing_meta, f, indent=2)
+        json.dump(metadatas, f, indent=2)
 
 
 def load_faiss_index():
@@ -53,7 +46,7 @@ def load_faiss_index():
     return index, metadata
 
 
-def search_faiss(query: str, k_top: int = 20):
+def search_faiss(query: str, k_top: int = 5):
     index, metadata = load_faiss_index()
 
     query_vector = model.encode(
@@ -81,7 +74,7 @@ def search_faiss(query: str, k_top: int = 20):
         results.append(chunk_meta)
     return results 
 
-def top_chunks(query, k_top=10):
+def top_chunks(query, k_top=5):
     text=""
     results=search_faiss(query, k_top=k_top)
     for result in results:
