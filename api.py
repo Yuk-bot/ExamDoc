@@ -2,6 +2,7 @@ from fastapi import FastAPI, File, UploadFile
 from typing import List
 import os
 from pydantic import BaseModel 
+from fastapi.openapi.utils import get_openapi
 
 from backend.pdf_extraction import extract_raw_text
 from backend.pdf_extraction import cleaned_text
@@ -26,6 +27,34 @@ class QueryRequest(BaseModel):
     k_top: int=5
 
 app= FastAPI() #fast api object 
+
+def custom_openapi():  #this is the fucntion to solve the problem in deployment of different version combinations leading to file upload problem
+    if app.openapi_schema:
+        return app.openapi_schema
+    
+   
+    openapi_schema = get_openapi(
+        title="My API",
+        version="1.0.0",
+        routes=app.routes,
+    )
+
+    #Force the format to binary for the specific file upload schema
+    try:
+       
+        schema_path = openapi_schema["components"]["schemas"]["Body_upload_multiple_upload_files_post"]["properties"]["files"]["items"]
+        schema_path["format"] = "binary"
+
+        if "contentMediaType" in schema_path:
+            del schema_path["contentMediaType"]
+            
+    except KeyError:
+        pass
+
+    app.openapi_schema = openapi_schema
+    return app.openapi_schema
+
+app.openapi = custom_openapi
 
 class FileUploadRequest(BaseModel):
     files: List[UploadFile]
