@@ -4,7 +4,8 @@ import os
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from backend.storage import generate_doc_id
-from backend.embeddings import model
+from backend.embeddings import get_model
+
 
 
 
@@ -49,7 +50,7 @@ def load_faiss_index():
 def search_faiss(query: str, k_top: int = 5):
     index, metadata = load_faiss_index()
 
-    query_vector = model.encode(
+    query_vector = get_model().encode(
         [query],
         convert_to_numpy=True,
         normalize_embeddings=True
