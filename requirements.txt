@@ -16,3 +16,4 @@ python-docx
 sentence-transformers
 google-genai
 #frontend -streamlit
+streamlit-pdf-viewer
