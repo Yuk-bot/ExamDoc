@@ -157,15 +157,7 @@ async def upload_multiple(files: List[UploadFile] = File(..., description="Uploa
         texts = [c["text"] for c in chunks]
 
         
-
-        if texts:
-            combined_chunks=chunks+summary_chunks
-            embeddings = embeded_chunks(combined_chunks)
-            build_or_update_faiss(embeddings, combined_chunks)
-            #indexes built before handn so that can be searched later
-
         summary, batch_summaries=merge_chunks(chunks) #returns summary as a string
-
 
         #converting the summary chunks to match the return type dict like other chunks for embeddings
         summary_chunks = [ 
@@ -180,6 +172,16 @@ async def upload_multiple(files: List[UploadFile] = File(..., description="Uploa
             for i, summary_text in enumerate(batch_summaries)
         ]
 
+
+        if texts:
+            combined_chunks=chunks+summary_chunks
+            embeddings = embeded_chunks(combined_chunks)
+            build_or_update_faiss(embeddings, combined_chunks)
+            #indexes built before handn so that can be searched later
+
+        
+
+      
         summary_path=save_summary(summary, doc_id)
         metadata["summary_path"]=summary_path
 
