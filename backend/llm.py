@@ -46,6 +46,8 @@ def summarize_chunk_batch(chunk_batch):
 
     prompt = f"""
 Summarize EACH chunk below in 1-2 concise sentences.
+The summary has to revolve around the chunk context only. 
+Do not include much extra information.
 Return numbered summaries matching chunk numbers.
 Do not merge chunks.
 
@@ -72,6 +74,8 @@ You are generating a high-quality document summary.
 
 Using the summaries below, produce a coherent,
 well-structured summary of the entire document.
+The summary has to revolve around the chunk context only. 
+Do not include much extra information.
 Highlight main themes, arguments, and conclusions.
 The summary should have only two sections - Summary and Conclusion.
 Do not mention any summary generation techniques in the response
