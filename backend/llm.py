@@ -77,7 +77,9 @@ well-structured summary of the entire document.
 The summary has to revolve around the chunk context only. 
 Do not include much extra information.
 Highlight main themes, arguments, and conclusions.
+Use simple and straightforward langauge.
 The summary should have only two sections - Summary and Conclusion.
+Keep the summary length medium- as per the document size.
 Do not mention any summary generation techniques in the response
 If found no summary chunks, say \"Upload the document for summary generation\n"
 
@@ -91,5 +93,5 @@ TEXT:
     if response.text: #if response generation is successful 
         ans=response.text.strip()
 
-    return ans
+    return ans, batch_summaries
 
