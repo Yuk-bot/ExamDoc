@@ -52,7 +52,7 @@ Do not merge chunks.
 {text}
 """
 
-    response=client.models.generate_content(model='gemini-2.5-flash-lite', contents=prompt)
+    response=client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
     ans=""
     if response.text: #if response generation is successful 
         ans=response.text.strip()
@@ -73,13 +73,16 @@ You are generating a high-quality document summary.
 Using the summaries below, produce a coherent,
 well-structured summary of the entire document.
 Highlight main themes, arguments, and conclusions.
+The summary should have only two sections - Summary and Conclusion.
+Do not mention any summary generation techniques in the response
+If found no summary chunks, say \"Upload the document for summary generation\n"
 
 
 TEXT:
 {merged_summary}
 """
 
-    response=client.models.generate_content(model='gemini-2.5-flash-lite', contents=final_prompt)
+    response=client.models.generate_content(model='gemini-2.5-flash', contents=final_prompt)
     ans=""
     if response.text: #if response generation is successful 
         ans=response.text.strip()
