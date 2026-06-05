@@ -48,19 +48,19 @@ boom. knowledge without suffering.
 
 backend:
 
-* fastapi
-* langchain
-* sentence-transformers
-* pdfplumber
+- fastapi
+- langchain
+- sentence-transformers
+- pdfplumber
 
 frontend:
 
-* streamlit
-* requests
+- streamlit
+- requests
 
 ai:
 
-* google generative ai / openai (depending on what you plug in)
+- google generative ai / openai (depending on what you plug in)
 
 ---
 
@@ -113,25 +113,27 @@ don’t push this to github unless you enjoy chaos
 
 ## limitations (aka reality check)
 
-* scanned PDFs? yeah… not yet
-  OCR coming soon - docker things uk..
+- scanned PDFs? yeah… not yet
+  OCR coming soon - deployment issues
+  
+- deployed on free tires of railway and streamlit - cloud so free tier issues
 
-* large files might be slow
+- large files might be slow
   patience is a virtue
 
-* depends on API keys
+- depends on API keys
   no key = no brain
 
-* requires exact prompts..chunking and retreival improvement under process
+- requires exact prompts..chunking and retreival improvement under process
 
 ---
 
 ## future plans (if motivation stays alive)
 
-* Reinforcement learning to improve bot intellegence
-* better UI (current one is- just functional)
-* chat memory
-* fast document analysis
+- Reinforcement learning and modular RAG to improve bot intellegence
+- better UI (current one is- just functional)
+- chat memory
+- fast document analysis
 
 
 
