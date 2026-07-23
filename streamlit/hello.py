@@ -158,7 +158,7 @@ with st.sidebar:
 
         with st.spinner("Processing…"):
             try:
-                res = requests.post("https://examdoc-madee-asy.up.railway.app/upload-files", files=files)
+                res = requests.post("http://127.0.0.1:8000/upload-files", files=files)
 
                 if res.status_code == 200:
                     data = res.json()
@@ -238,7 +238,8 @@ with right_col:
 
             try:
                 res = requests.post(
-                    "https://examdoc-madee-asy.up.railway.app/query",
+                    "http://127.0.0.1:8000/query",
+
                     json={"query": prompt}
                 )
                 answer = res.json()["answer"]

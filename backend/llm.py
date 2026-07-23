@@ -10,7 +10,9 @@ def build_prompt(query, context): #both string inputs
     return ( #this whole thing based on to the llm to give results
     "You are a helpful assistant.\n"
     "Answer ONLY using the context below.\n"
+    "Think step by step before giving the answer"
     "If the answer is not present in the context, say \"Sorry, I don't know. The relevant ans doesn't exist in your pdf :( \"\n\n"
+    
     "Context:\n"
     + context + #the top chunks
     "\n\nQuestion:\n"
@@ -25,7 +27,7 @@ def generate_answer(query:str, context: str):
     
     prompt=build_prompt(query, context)
 
-    response=client.models.generate_content(model='gemini-2.5-flash-lite', contents=prompt)
+    response=client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
     ans=""
     if response.text: #if response generation is successful 
         ans=response.text.strip()
